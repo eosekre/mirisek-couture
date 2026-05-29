@@ -1,402 +1,538 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:title" content="Mirisek Couture — African Luxury Fashion House">
-<meta property="og:description" content="Luxury African couture inspired by royalty, heritage textiles, and modern editorial elegance. Accra, Ghana.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1200&auto=format&fit=crop">
-<meta property="og:url" content="https://eosekre.github.io/mirisek-couture">
-<meta name="twitter:card" content="summary_large_image">
-<title>Mirisek Couture — African Luxury Fashion House</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,300;1,400&family=Josefin+Sans:wght@200;300;400;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta property="og:title" content="Mirisek Couture — African Print Fashion, Accra Ghana"/>
+<meta property="og:description" content="Handcrafted African print fashion that celebrates the richness of the continent. Kente, Ankara, Adire, Bogolan. Born in Accra."/>
+<meta property="og:image" content="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1200&auto=format&fit=crop"/>
+<meta property="og:url" content="https://eosekre.github.io/mirisek-couture"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<title>Mirisek Couture — African Print Fashion</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-:root{
-  --amber:#f59e0b; --amber-light:#fcd34d; --amber-200:#fde68a;
-  --white:#fff; --gray-3:#d1d5db; --gray-4:#9ca3af; --gray-5:#6b7280;
-  --zinc-8:#27272a; --zinc-9:#18181b; --bg:#050505; --bg2:#080808; --bg3:#0b0b0b;
-}
-html{scroll-behavior:smooth;}
-body{background:var(--bg);color:var(--white);font-family:'Josefin Sans',sans-serif;font-weight:300;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
-a{color:inherit;text-decoration:none;}
-img{display:block;max-width:100%;}
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --gold: #C8973A; --gold-light: #E5B96A; --sand: #F5EDD8;
+    --clay: #8B4A2B; --midnight: #0E0D0C; --charcoal: #1E1B17;
+    --off-white: #FAF7F2; --text-muted: #9A8F82;
+    --kente-red: #B33A2A; --kente-green: #2E6B40; --kente-blue: #1A4A7A;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--midnight); color: var(--off-white); overflow-x: hidden; cursor: none; }
 
-/* ── SHARE BAR ── */
-.share-bar{
-  position:fixed;top:0;left:0;right:0;z-index:300;
-  background:rgba(0,0,0,0.6);backdrop-filter:blur(14px);
-  border-bottom:1px solid rgba(255,255,255,0.08);
-  padding:8px 24px;display:flex;align-items:center;justify-content:flex-end;gap:8px;
-}
-.share-btn{
-  padding:6px 14px;border:1px solid #3f3f46;background:transparent;
-  color:var(--amber);font-family:'Josefin Sans',sans-serif;
-  font-size:8px;letter-spacing:0.4em;text-transform:uppercase;
-  cursor:pointer;border-radius:999px;
-  transition:background .25s,color .25s,border-color .25s;
-  display:inline-flex;align-items:center;gap:5px;
-}
-.share-btn:hover,.share-btn.primary{background:var(--amber);color:#000;border-color:var(--amber);}
-.share-btn svg{width:10px;height:10px;fill:currentColor;flex-shrink:0;}
+  /* ── SHARE BAR ── */
+  .share-bar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 2000;
+    background: rgba(14,13,12,0.96); backdrop-filter: blur(14px);
+    border-bottom: 0.5px solid rgba(200,151,58,0.25);
+    padding: 7px 24px; display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  }
+  .share-logo { font-family: 'Bebas Neue', sans-serif; font-size: 14px; letter-spacing: 0.12em; color: var(--gold); }
+  .share-logo span { color: var(--off-white); }
+  .share-actions { display: flex; gap: 7px; flex-wrap: wrap; }
+  .share-btn {
+    padding: 6px 14px; border: 0.5px solid rgba(200,151,58,0.4);
+    background: transparent; color: var(--gold);
+    font-family: 'DM Sans', sans-serif; font-size: 8px; letter-spacing: 0.35em; text-transform: uppercase;
+    cursor: pointer; border-radius: 2px;
+    transition: background .2s, color .2s; display: inline-flex; align-items: center; gap: 5px;
+    text-decoration: none;
+  }
+  .share-btn:hover, .share-btn.primary { background: var(--gold); color: var(--midnight); border-color: var(--gold); }
+  .share-btn svg { width: 10px; height: 10px; fill: currentColor; flex-shrink: 0; }
 
-/* ── NAVBAR ── */
-.navbar{
-  position:fixed;top:36px;left:0;right:0;z-index:200;
-  background:rgba(0,0,0,0.4);backdrop-filter:blur(20px);
-  border-bottom:1px solid rgba(255,255,255,0.08);
-  padding:20px 40px;display:flex;align-items:center;justify-content:space-between;
-}
-.nav-brand h1{font-family:'Josefin Sans',sans-serif;font-size:22px;letter-spacing:0.3em;font-weight:700;}
-.nav-brand p{font-size:9px;text-transform:uppercase;letter-spacing:0.4em;color:var(--amber-light);margin-top:2px;}
-.nav-links{display:flex;gap:40px;font-size:12px;text-transform:uppercase;letter-spacing:0.2em;color:var(--gray-3);}
-.nav-links a:hover{color:var(--amber-light);}
-@media(max-width:768px){.nav-links{display:none;}}
-.nav-cta{
-  border:1px solid var(--amber);color:var(--amber-light);
-  padding:9px 22px;border-radius:999px;
-  font-size:10px;text-transform:uppercase;letter-spacing:0.3em;
-  cursor:pointer;background:transparent;font-family:'Josefin Sans',sans-serif;
-  transition:background .3s,color .3s;
-}
-.nav-cta:hover{background:var(--amber);color:#000;}
+  /* Custom cursor */
+  .cursor { width: 12px; height: 12px; background: var(--gold); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); transition: transform 0.1s, width 0.2s, height 0.2s; mix-blend-mode: difference; }
+  .cursor-ring { width: 36px; height: 36px; border: 1px solid var(--gold); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9998; transform: translate(-50%, -50%); transition: transform 0.15s ease-out, width 0.3s, height 0.3s, opacity 0.3s; opacity: 0.6; }
 
-/* ── HERO ── */
-.hero{
-  position:relative;height:100vh;min-height:600px;
-  display:flex;align-items:center;justify-content:center;
-  text-align:center;padding:80px 24px 40px;overflow:hidden;
-}
-.hero-bg{
-  position:absolute;inset:0;
-  background:url('https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1887&auto=format&fit=crop') center/cover no-repeat;
-  transform:scale(1.05);
-}
-.hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.7);}
-.hero-grad{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.2) 50%,#050505 100%);}
-.hero-content{position:relative;z-index:10;max-width:1000px;margin-top:80px;}
-.hero-eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:0.5em;color:var(--amber-light);margin-bottom:24px;animation:fadeUp 1s ease both;}
-.hero-title{
-  font-family:'Playfair Display',serif;
-  font-size:clamp(56px,12vw,144px);font-weight:700;line-height:0.95;margin-bottom:32px;
-  animation:fadeUp 1s 0.1s ease both;
-}
-.hero-title em{display:block;font-style:italic;font-weight:300;color:var(--amber-200);}
-.hero-sub{
-  font-size:clamp(15px,2.2vw,22px);color:var(--gray-3);
-  max-width:720px;margin:0 auto 40px;line-height:1.7;
-  animation:fadeUp 1s 0.2s ease both;
-}
-.hero-btns{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;animation:fadeUp 1s 0.3s ease both;}
-.btn-gold{
-  background:var(--amber);color:#000;
-  padding:20px 44px;border-radius:999px;border:none;
-  font-size:10px;text-transform:uppercase;letter-spacing:0.3em;font-weight:600;
-  cursor:pointer;font-family:'Josefin Sans',sans-serif;
-  transition:transform .3s,box-shadow .3s;
-  box-shadow:0 25px 50px rgba(245,158,11,0.2);
-}
-.btn-gold:hover{transform:scale(1.05);box-shadow:0 25px 60px rgba(245,158,11,0.35);}
-.btn-white{
-  background:transparent;color:var(--white);
-  padding:20px 44px;border-radius:999px;
-  border:1px solid var(--white);
-  font-size:10px;text-transform:uppercase;letter-spacing:0.3em;
-  cursor:pointer;font-family:'Josefin Sans',sans-serif;
-  transition:background .3s,color .3s;
-  display:inline-block;
-}
-.btn-white:hover{background:var(--white);color:#000;}
+  ::-webkit-scrollbar { width: 3px; }
+  ::-webkit-scrollbar-track { background: var(--charcoal); }
+  ::-webkit-scrollbar-thumb { background: var(--gold); }
 
-/* ── FEATURE BAR ── */
-.feature-bar{border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08);background:#000;padding:24px 40px;}
-.feature-bar-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;}
-@media(max-width:640px){.feature-bar-inner{grid-template-columns:repeat(2,1fr);}}
-.feat-title{font-family:'Playfair Display',serif;font-size:22px;color:var(--amber-light);margin-bottom:4px;}
-.feat-sub{font-size:9px;text-transform:uppercase;letter-spacing:0.3em;color:var(--gray-5);}
+  /* NAV */
+  nav {
+    position: fixed; top: 36px; left: 0; right: 0; z-index: 1000;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.8rem 4rem;
+    background: linear-gradient(to bottom, rgba(14,13,12,0.95) 0%, transparent 100%);
+    transition: padding 0.3s, background 0.3s;
+  }
+  nav.scrolled { background: rgba(14,13,12,0.97); padding: 1.2rem 4rem; border-bottom: 0.5px solid rgba(200,151,58,0.2); }
+  .nav-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 0.1em; color: var(--gold); text-decoration: none; }
+  .nav-logo span { color: var(--off-white); }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a { color: var(--off-white); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0.75; transition: opacity 0.2s, color 0.2s; font-weight: 300; }
+  .nav-links a:hover { opacity: 1; color: var(--gold); }
+  @media(max-width:768px){.nav-links{display:none;}}
+  .nav-cta { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 0.6rem 1.6rem; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background 0.3s, color 0.3s; font-weight: 400; }
+  .nav-cta:hover { background: var(--gold); color: var(--midnight); }
 
-/* ── COLLECTIONS ── */
-.collections{padding:112px 24px;background:var(--bg2);}
-.collections-inner{max-width:1280px;margin:0 auto;}
-.collections-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:80px;gap:32px;flex-wrap:wrap;}
-.col-eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:0.4em;color:var(--amber-light);margin-bottom:16px;}
-.col-title{font-family:'Playfair Display',serif;font-size:clamp(40px,7vw,80px);font-style:italic;line-height:1.1;}
-.col-desc{color:var(--gray-4);max-width:480px;line-height:1.8;font-size:16px;}
-.col-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;}
-@media(max-width:900px){.col-grid{grid-template-columns:1fr;}}
-.col-card{position:relative;overflow:hidden;border-radius:32px;height:700px;background:#000;cursor:pointer;}
-.col-card img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease;}
-.col-card:hover img{transform:scale(1.1);}
-.col-card-grad{position:absolute;inset:0;background:linear-gradient(to top,#000 0%,rgba(0,0,0,0.3) 50%,transparent 100%);}
-.col-card-body{position:absolute;bottom:0;padding:40px;}
-.col-card-sub{font-size:9px;text-transform:uppercase;letter-spacing:0.3em;color:var(--amber-light);margin-bottom:16px;}
-.col-card-title{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,48px);font-style:italic;margin-bottom:20px;}
-.col-card-btn{
-  border:1px solid var(--white);padding:12px 28px;border-radius:999px;
-  font-size:9px;text-transform:uppercase;letter-spacing:0.3em;
-  background:transparent;color:var(--white);cursor:pointer;font-family:'Josefin Sans',sans-serif;
-  transition:background .3s,color .3s;
-}
-.col-card-btn:hover{background:var(--white);color:#000;}
+  /* HERO */
+  .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; position: relative; overflow: hidden; padding-top: 36px; }
+  @media(max-width:768px){.hero{grid-template-columns:1fr;}}
+  .hero-left { display: flex; flex-direction: column; justify-content: flex-end; padding: 0 5rem 6rem 4rem; position: relative; z-index: 2; }
+  @media(max-width:768px){.hero-left{padding:120px 2rem 4rem;}}
+  .hero-tag { font-size: 0.72rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; opacity: 0; animation: fadeUp 0.8s 0.3s ease forwards; }
+  .hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(4rem, 8vw, 8rem); font-weight: 300; line-height: 0.9; letter-spacing: -0.02em; margin-bottom: 2rem; opacity: 0; animation: fadeUp 0.9s 0.5s ease forwards; }
+  .hero-title em { font-style: italic; color: var(--gold-light); }
+  .hero-desc { font-size: 1rem; line-height: 1.8; color: var(--text-muted); max-width: 420px; margin-bottom: 3rem; opacity: 0; animation: fadeUp 0.9s 0.7s ease forwards; font-weight: 300; }
+  .hero-actions { display: flex; gap: 1.5rem; align-items: center; opacity: 0; animation: fadeUp 0.9s 0.9s ease forwards; flex-wrap: wrap; }
+  .btn-primary { background: var(--gold); color: var(--midnight); padding: 1rem 2.5rem; font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; font-weight: 500; transition: background 0.3s, transform 0.2s; display: inline-block; }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-ghost { color: var(--off-white); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; opacity: 0.7; transition: opacity 0.2s; font-weight: 300; }
+  .btn-ghost:hover { opacity: 1; }
+  .btn-ghost::after { content: '→'; transition: transform 0.2s; }
+  .btn-ghost:hover::after { transform: translateX(4px); }
+  .hero-right { position: relative; overflow: hidden; }
+  @media(max-width:768px){.hero-right{height:400px;}}
+  .hero-image-bg { position: absolute; inset: 0; background: var(--charcoal); overflow: hidden; }
+  .hero-pattern { position: absolute; inset: 0; opacity: 0.15; background-image: repeating-linear-gradient(90deg, var(--gold) 0, var(--gold) 4px, transparent 4px, transparent 40px), repeating-linear-gradient(0deg, var(--kente-red) 0, var(--kente-red) 4px, transparent 4px, transparent 40px), repeating-linear-gradient(45deg, var(--kente-green) 0, var(--kente-green) 2px, transparent 2px, transparent 20px); }
+  .hero-fashion-figure { position: absolute; inset: 0; display: flex; align-items: flex-end; justify-content: center; }
+  .fashion-silhouette { width: 70%; height: 85%; background: linear-gradient(180deg, #2A1F14 0%, #3D2B1A 40%, #5C3D24 70%, #7A5230 100%); clip-path: polygon(25% 0%, 75% 0%, 90% 15%, 85% 40%, 95% 55%, 88% 100%, 12% 100%, 5% 55%, 15% 40%, 10% 15%); position: relative; opacity: 0; animation: fadeIn 1s 0.8s ease forwards; }
+  .fashion-silhouette::before { content: ''; position: absolute; inset: 0; background-image: repeating-linear-gradient(90deg, rgba(200,151,58,0.3) 0, rgba(200,151,58,0.3) 3px, transparent 3px, transparent 15px), repeating-linear-gradient(0deg, rgba(179,58,42,0.2) 0, rgba(179,58,42,0.2) 3px, transparent 3px, transparent 15px); }
+  .hero-scroll-hint { position: absolute; bottom: 3rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 0.5rem; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); z-index: 3; opacity: 0; animation: fadeIn 1s 1.5s ease forwards; }
+  .scroll-line { width: 1px; height: 40px; background: var(--gold); animation: scrollPulse 2s ease infinite; }
 
-/* ── STORY ── */
-.story{padding:128px 24px;background:#000;}
-.story-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
-@media(max-width:900px){.story-inner{grid-template-columns:1fr;}}
-.story-img-wrap{position:relative;}
-.story-img{border-radius:32px;height:750px;width:100%;object-fit:cover;}
-.story-badge{
-  position:absolute;bottom:-32px;right:-32px;
-  background:var(--amber);color:#000;
-  padding:40px;border-radius:32px;
-  box-shadow:0 25px 50px rgba(0,0,0,0.5);
-  max-width:280px;
-}
-@media(max-width:900px){.story-badge{position:static;margin-top:24px;max-width:100%;border-radius:24px;}}
-.story-badge-num{font-family:'Playfair Display',serif;font-size:56px;font-weight:700;display:block;line-height:1;margin-bottom:8px;}
-.story-badge-txt{font-size:9px;text-transform:uppercase;letter-spacing:0.3em;font-weight:600;}
-.story-eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:0.4em;color:var(--amber-light);margin-bottom:20px;}
-.story-title{font-family:'Playfair Display',serif;font-size:clamp(40px,6vw,72px);font-style:italic;line-height:1.15;margin-bottom:32px;}
-.story-body{color:var(--gray-4);font-size:17px;line-height:1.8;margin-bottom:24px;}
-.story-body2{color:var(--gray-5);line-height:1.8;margin-bottom:40px;}
+  /* MARQUEE */
+  .marquee-section { padding: 1.5rem 0; background: var(--gold); overflow: hidden; position: relative; z-index: 2; }
+  .marquee-track { display: flex; gap: 3rem; animation: marquee 20s linear infinite; white-space: nowrap; }
+  .marquee-item { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; letter-spacing: 0.15em; color: var(--midnight); display: flex; align-items: center; gap: 3rem; flex-shrink: 0; }
+  .marquee-item::after { content: '◆'; font-size: 0.6rem; opacity: 0.6; }
 
-/* ── TESTIMONIALS ── */
-.testimonials{padding:112px 24px;background:var(--bg3);border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08);}
-.testimonials-inner{max-width:1152px;margin:0 auto;text-align:center;}
-.testi-title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,72px);font-style:italic;margin-bottom:80px;}
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;}
-@media(max-width:768px){.testi-grid{grid-template-columns:1fr;}}
-.testi-card{background:#000;border:1px solid rgba(255,255,255,0.08);border-radius:32px;padding:40px;}
-.testi-stars{color:var(--amber-light);font-size:24px;margin-bottom:20px;letter-spacing:4px;}
-.testi-text{color:var(--gray-3);font-size:17px;line-height:1.7;margin-bottom:24px;font-style:italic;}
-.testi-author{font-size:9px;text-transform:uppercase;letter-spacing:0.3em;color:var(--gray-5);}
+  /* ABOUT */
+  .about-section { padding: 10rem 4rem; display: grid; grid-template-columns: 1fr 1.4fr; gap: 8rem; align-items: center; max-width: 1400px; margin: 0 auto; }
+  @media(max-width:900px){.about-section{grid-template-columns:1fr;gap:4rem;padding:6rem 2rem;}}
+  .section-label { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem; }
+  .section-label::before { content: ''; width: 30px; height: 1px; background: var(--gold); }
+  .about-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 4vw, 4rem); font-weight: 300; line-height: 1.1; margin-bottom: 2rem; }
+  .about-title em { font-style: italic; color: var(--gold-light); }
+  .about-text { color: var(--text-muted); line-height: 2; font-size: 0.95rem; font-weight: 300; margin-bottom: 1.5rem; }
+  .about-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; padding-top: 3rem; border-top: 0.5px solid rgba(200,151,58,0.2); }
+  .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; color: var(--gold); letter-spacing: 0.05em; line-height: 1; }
+  .stat-label { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-top: 0.3rem; font-weight: 300; }
+  .about-visual { position: relative; height: 600px; }
+  .about-card-main { position: absolute; top: 0; right: 0; width: 75%; height: 80%; background: var(--charcoal); overflow: hidden; }
+  .about-card-accent { position: absolute; bottom: 0; left: 0; width: 50%; height: 50%; background: var(--clay); overflow: hidden; }
+  .kente-block { width: 100%; height: 100%; background-image: repeating-linear-gradient(0deg, transparent 0, transparent 8px, rgba(200,151,58,0.4) 8px, rgba(200,151,58,0.4) 10px), repeating-linear-gradient(90deg, transparent 0, transparent 8px, rgba(200,151,58,0.4) 8px, rgba(200,151,58,0.4) 10px), repeating-linear-gradient(45deg, rgba(179,58,42,0.3) 0, rgba(179,58,42,0.3) 3px, transparent 3px, transparent 12px), repeating-linear-gradient(-45deg, rgba(46,107,64,0.3) 0, rgba(46,107,64,0.3) 3px, transparent 3px, transparent 12px); }
+  .about-card-number { position: absolute; top: 2rem; left: 2rem; font-family: 'Bebas Neue', sans-serif; font-size: 8rem; color: rgba(200,151,58,0.1); line-height: 1; pointer-events: none; }
 
-/* ── CTA ── */
-.cta{position:relative;padding:144px 24px;text-align:center;overflow:hidden;}
-.cta-glow{position:absolute;inset:0;background:radial-gradient(circle at center,rgba(251,191,36,0.18),transparent 60%);pointer-events:none;}
-.cta-inner{position:relative;z-index:10;max-width:896px;margin:0 auto;}
-.cta-eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:0.5em;color:var(--amber-light);margin-bottom:24px;}
-.cta-title{font-family:'Playfair Display',serif;font-size:clamp(48px,9vw,96px);font-style:italic;line-height:1.1;margin-bottom:32px;}
-.cta-sub{color:var(--gray-4);font-size:19px;line-height:1.7;margin-bottom:48px;max-width:640px;margin-left:auto;margin-right:auto;}
-.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  /* COLLECTIONS */
+  .collection-section { padding: 8rem 4rem; background: var(--charcoal); }
+  .section-header { display: flex; justify-content: space-between; align-items: flex-end; max-width: 1400px; margin: 0 auto 4rem; padding-bottom: 4rem; border-bottom: 0.5px solid rgba(200,151,58,0.15); flex-wrap: wrap; gap: 24px; }
+  .collection-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 5vw, 5rem); font-weight: 300; line-height: 0.95; }
+  .collection-title em { font-style: italic; color: var(--gold-light); }
+  .view-all { color: var(--gold); text-decoration: none; font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; display: flex; align-items: center; gap: 0.5rem; transition: gap 0.2s; font-weight: 300; }
+  .view-all:hover { gap: 1rem; }
+  .view-all::after { content: '→'; }
+  .products-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; max-width: 1400px; margin: 0 auto; }
+  @media(max-width:1024px){.products-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:600px){.products-grid{grid-template-columns:1fr;}}
+  .product-card { cursor: pointer; position: relative; overflow: hidden; background: var(--midnight); }
+  .product-card:first-child { grid-row: span 2; }
+  .product-visual { aspect-ratio: 3/4; overflow: hidden; position: relative; }
+  .product-card:first-child .product-visual { aspect-ratio: auto; height: 100%; min-height: 600px; }
+  .product-bg { width: 100%; height: 100%; transition: transform 0.6s ease; position: relative; display: flex; align-items: flex-end; justify-content: center; overflow: hidden; }
+  .product-card:hover .product-bg { transform: scale(1.05); }
+  .prod-1{background:linear-gradient(160deg,#1A0F08,#3D1F10);}
+  .prod-2{background:linear-gradient(160deg,#0A1A0F,#1A3D20);}
+  .prod-3{background:linear-gradient(160deg,#0A0A1A,#1A1A3D);}
+  .prod-4{background:linear-gradient(160deg,#1A0A0A,#3D1A1A);}
+  .prod-5{background:linear-gradient(160deg,#1A150A,#3D2D10);}
+  .prod-pattern { position: absolute; inset: 0; opacity: 0.4; }
+  .prod-pattern-kente { background-image: repeating-linear-gradient(90deg,var(--gold) 0,var(--gold) 2px,transparent 2px,transparent 20px), repeating-linear-gradient(0deg,var(--kente-red) 0,var(--kente-red) 2px,transparent 2px,transparent 20px); }
+  .prod-pattern-ankara { background-image: repeating-linear-gradient(45deg,var(--gold) 0,var(--gold) 2px,transparent 2px,transparent 15px), repeating-linear-gradient(-45deg,var(--kente-green) 0,var(--kente-green) 2px,transparent 2px,transparent 15px); }
+  .prod-pattern-adire { background-image: radial-gradient(circle at 25% 25%,var(--gold) 3px,transparent 3px), radial-gradient(circle at 75% 75%,var(--kente-red) 3px,transparent 3px); background-size:30px 30px; }
+  .prod-pattern-bogolan { background-image: repeating-linear-gradient(0deg,var(--clay) 0,var(--clay) 3px,transparent 3px,transparent 12px), repeating-linear-gradient(90deg,rgba(200,151,58,0.5) 0,rgba(200,151,58,0.5) 3px,transparent 3px,transparent 12px); }
+  .prod-pattern-wax { background-image: repeating-linear-gradient(30deg,var(--gold) 0,var(--gold) 1px,transparent 1px,transparent 18px), repeating-linear-gradient(-30deg,var(--kente-blue) 0,var(--kente-blue) 1px,transparent 1px,transparent 18px); }
+  .prod-figure { position: relative; z-index: 1; width: 60%; height: 85%; background: rgba(200,151,58,0.15); clip-path: polygon(20% 0%,80% 0%,90% 10%,85% 35%,95% 50%,85% 100%,15% 100%,5% 50%,15% 35%,10% 10%); backdrop-filter: blur(1px); }
+  .product-info { padding: 1.2rem 1.2rem 1.5rem; background: var(--midnight); }
+  .product-collection-tag { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.4rem; font-weight: 300; }
+  .product-name { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 400; margin-bottom: 0.5rem; letter-spacing: 0.02em; }
+  .product-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 0.8rem; }
+  .product-price { font-size: 0.9rem; color: var(--gold); font-weight: 400; }
+  .product-add { width: 32px; height: 32px; background: var(--gold); color: var(--midnight); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: 300; transition: background 0.2s; }
+  .product-add:hover { background: var(--gold-light); }
+  .product-badge { position: absolute; top: 1rem; left: 1rem; z-index: 3; background: var(--kente-red); color: white; font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.3rem 0.7rem; font-weight: 400; }
+  .product-overlay { position: absolute; inset: 0; background: rgba(14,13,12,0.5); opacity: 0; z-index: 2; display: flex; align-items: center; justify-content: center; transition: opacity 0.3s; }
+  .product-card:hover .product-overlay { opacity: 1; }
+  .overlay-btn { background: var(--off-white); color: var(--midnight); padding: 0.8rem 2rem; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; font-weight: 500; transform: translateY(10px); transition: transform 0.3s 0.05s, background 0.2s; }
+  .product-card:hover .overlay-btn { transform: translateY(0); }
+  .overlay-btn:hover { background: var(--gold); }
 
-/* ── FOOTER ── */
-footer{border-top:1px solid rgba(255,255,255,0.08);padding:48px 40px;background:#000;}
-.footer-inner{max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;}
-.footer-brand h3{font-family:'Josefin Sans',sans-serif;font-size:22px;letter-spacing:0.3em;font-weight:700;}
-.footer-brand p{color:var(--gray-5);font-size:9px;text-transform:uppercase;letter-spacing:0.3em;margin-top:8px;}
-.footer-links{display:flex;gap:32px;font-size:10px;text-transform:uppercase;letter-spacing:0.3em;color:var(--gray-4);}
-.footer-links a:hover{color:var(--amber-light);}
+  /* PROCESS */
+  .process-section { padding: 10rem 4rem; max-width: 1400px; margin: 0 auto; }
+  .process-header { text-align: center; margin-bottom: 6rem; }
+  .process-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 4vw, 4.5rem); font-weight: 300; line-height: 1.1; margin-bottom: 1rem; }
+  .process-title em { font-style: italic; color: var(--gold-light); }
+  .process-sub { color: var(--text-muted); font-size: 0.9rem; max-width: 500px; margin: 0 auto; line-height: 1.8; font-weight: 300; }
+  .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; }
+  @media(max-width:768px){.process-grid{grid-template-columns:1fr 1fr;gap:3rem;}}
+  .process-grid::before { content: ''; position: absolute; top: 3.5rem; left: 3rem; right: 3rem; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), var(--gold), transparent); opacity: 0.3; }
+  .process-step { padding: 0 2.5rem; text-align: center; position: relative; }
+  .process-step:not(:last-child)::after { content: ''; position: absolute; top: 3.5rem; right: 0; width: 1px; height: 40px; background: rgba(200,151,58,0.3); transform: translateY(-50%); }
+  .step-num { width: 56px; height: 56px; background: transparent; border: 1px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; color: var(--gold); letter-spacing: 0.1em; margin: 0 auto 2rem; }
+  .step-title { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; margin-bottom: 1rem; letter-spacing: 0.02em; }
+  .step-text { font-size: 0.85rem; color: var(--text-muted); line-height: 1.9; font-weight: 300; }
 
-/* ── TOAST ── */
-.toast{
-  position:fixed;bottom:24px;left:50%;
-  transform:translateX(-50%) translateY(80px);
-  background:var(--amber);color:#000;
-  font-family:'Josefin Sans',sans-serif;font-size:9px;letter-spacing:0.4em;text-transform:uppercase;
-  padding:12px 28px;border-radius:999px;
-  transition:transform .4s ease;z-index:400;pointer-events:none;
-}
-.toast.show{transform:translateX(-50%) translateY(0);}
+  /* LOOKBOOK */
+  .lookbook-section { padding: 0; background: var(--sand); color: var(--midnight); display: grid; grid-template-columns: 1fr 1fr; min-height: 70vh; }
+  @media(max-width:768px){.lookbook-section{grid-template-columns:1fr;}}
+  .lookbook-content { padding: 8rem 5rem; display: flex; flex-direction: column; justify-content: center; }
+  @media(max-width:768px){.lookbook-content{padding:4rem 2rem;}}
+  .lookbook-quote { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 300; font-style: italic; line-height: 1.5; color: var(--charcoal); margin-bottom: 2rem; position: relative; }
+  .lookbook-quote::before { content: '"'; font-size: 8rem; color: var(--gold); opacity: 0.3; position: absolute; top: -2rem; left: -1rem; font-family: 'Cormorant Garamond', serif; line-height: 1; }
+  .lookbook-attribution { font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--clay); margin-bottom: 3rem; font-weight: 400; }
+  .lookbook-visual { background: var(--charcoal); position: relative; overflow: hidden; }
+  .lookbook-pattern { position: absolute; inset: 0; background-image: repeating-linear-gradient(90deg, rgba(200,151,58,0.15) 0, rgba(200,151,58,0.15) 2px, transparent 2px, transparent 30px), repeating-linear-gradient(0deg, rgba(200,151,58,0.15) 0, rgba(200,151,58,0.15) 2px, transparent 2px, transparent 30px), repeating-linear-gradient(45deg, rgba(179,58,42,0.1) 0, rgba(179,58,42,0.1) 2px, transparent 2px, transparent 20px); }
+  .lookbook-num { position: absolute; bottom: 3rem; right: 3rem; font-family: 'Bebas Neue', sans-serif; font-size: 10rem; color: rgba(200,151,58,0.15); line-height: 1; }
 
-@keyframes fadeUp{
-  from{opacity:0;transform:translateY(24px);}
-  to{opacity:1;transform:translateY(0);}
-}
+  /* NEWSLETTER */
+  .newsletter-section { padding: 8rem 4rem; text-align: center; position: relative; overflow: hidden; }
+  .newsletter-section::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle at 20% 50%, rgba(200,151,58,0.04) 0%, transparent 50%), radial-gradient(circle at 80% 50%, rgba(139,74,43,0.04) 0%, transparent 50%); }
+  .newsletter-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 4rem); font-weight: 300; margin-bottom: 1rem; position: relative; }
+  .newsletter-title em { font-style: italic; color: var(--gold-light); }
+  .newsletter-desc { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 3rem; font-weight: 300; }
+  .newsletter-form { display: flex; max-width: 500px; margin: 0 auto; border: 0.5px solid rgba(200,151,58,0.4); flex-wrap: wrap; }
+  .newsletter-input { flex: 1; min-width: 200px; background: transparent; border: none; outline: none; padding: 1.1rem 1.5rem; color: var(--off-white); font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 300; }
+  .newsletter-input::placeholder { color: var(--text-muted); }
+  .newsletter-btn { background: var(--gold); color: var(--midnight); border: none; padding: 1.1rem 2rem; font-family: 'DM Sans', sans-serif; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; font-weight: 500; transition: background 0.2s; }
+  .newsletter-btn:hover { background: var(--gold-light); }
+
+  /* FOOTER */
+  footer { padding: 5rem 4rem 3rem; background: var(--charcoal); border-top: 0.5px solid rgba(200,151,58,0.15); }
+  @media(max-width:768px){footer{padding:3rem 2rem;}}
+  .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem; padding-bottom: 4rem; border-bottom: 0.5px solid rgba(200,151,58,0.1); }
+  @media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr;}}
+  @media(max-width:600px){.footer-top{grid-template-columns:1fr;}}
+  .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 2.2rem; color: var(--gold); letter-spacing: 0.1em; display: block; margin-bottom: 1.2rem; text-decoration: none; }
+  .footer-logo span { color: var(--off-white); }
+  .footer-tagline { color: var(--text-muted); font-size: 0.85rem; line-height: 1.8; font-weight: 300; max-width: 260px; margin-bottom: 2rem; }
+  .footer-socials { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .social-link { width: 36px; height: 36px; border: 0.5px solid rgba(200,151,58,0.3); display: flex; align-items: center; justify-content: center; color: var(--text-muted); text-decoration: none; font-size: 0.8rem; transition: border-color 0.2s, color 0.2s; }
+  .social-link:hover { border-color: var(--gold); color: var(--gold); }
+  .footer-col h4 { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--off-white); margin-bottom: 1.5rem; font-weight: 400; }
+  .footer-links { list-style: none; }
+  .footer-links li { margin-bottom: 0.8rem; }
+  .footer-links a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; font-weight: 300; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--gold); }
+  .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  .footer-copy { font-size: 0.78rem; color: var(--text-muted); font-weight: 300; }
+  .footer-divider { font-size: 0.78rem; color: rgba(200,151,58,0.4); letter-spacing: 0.1em; }
+
+  /* TOAST */
+  .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(80px); background: var(--gold); color: var(--midnight); font-family: 'DM Sans', sans-serif; font-size: 9px; letter-spacing: 0.4em; text-transform: uppercase; padding: 12px 28px; transition: transform 0.4s ease; z-index: 3000; pointer-events: none; }
+  .toast.show { transform: translateX(-50%) translateY(0); }
+
+  @keyframes fadeUp { from{opacity:0;transform:translateY(30px);} to{opacity:1;transform:translateY(0);} }
+  @keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
+  @keyframes marquee { from{transform:translateX(0);} to{transform:translateX(-50%);} }
+  @keyframes scrollPulse { 0%,100%{transform:scaleY(1);opacity:1;} 50%{transform:scaleY(0.5);opacity:0.5;} }
+  .reveal { opacity:0; transform:translateY(40px); transition:opacity 0.8s ease,transform 0.8s ease; }
+  .reveal.visible { opacity:1; transform:translateY(0); }
+  .reveal-delay-1{transition-delay:0.1s;} .reveal-delay-2{transition-delay:0.2s;} .reveal-delay-3{transition-delay:0.3s;} .reveal-delay-4{transition-delay:0.4s;}
 </style>
 </head>
 <body>
 
-<!-- SHARE BAR -->
-<div class="share-bar">
-  <button class="share-btn" onclick="shareWhatsApp()">
-    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    WhatsApp
-  </button>
-  <button class="share-btn" onclick="shareFacebook()">
-    <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-    Facebook
-  </button>
-  <a class="share-btn" href="https://www.instagram.com/mirisek_couture/" target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-    Instagram
-  </a>
-  <button class="share-btn primary" onclick="copyLink()">
-    <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
-    Copy Link
-  </button>
-</div>
-
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
 <div class="toast" id="toast">Copied!</div>
 
-<!-- NAVBAR -->
-<header class="navbar">
-  <div class="nav-brand">
-    <h1>MIRISEK</h1>
-    <p>Couture</p>
+<!-- SHARE BAR -->
+<div class="share-bar">
+  <div class="share-logo">MIRISEK<span> COUTURE</span></div>
+  <div class="share-actions">
+    <button class="share-btn" onclick="shareWhatsApp()">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp
+    </button>
+    <button class="share-btn" onclick="shareFacebook()">
+      <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      Facebook
+    </button>
+    <a class="share-btn" href="https://www.instagram.com/mirisek_couture/" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      Instagram
+    </a>
+    <button class="share-btn primary" onclick="copyLink()">
+      <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+      Copy Link
+    </button>
   </div>
-  <nav class="nav-links">
-    <a href="#collections">Collections</a>
-    <a href="#lookbook">Lookbook</a>
-    <a href="#story">Bespoke</a>
-    <a href="#story">About</a>
-  </nav>
-  <a class="nav-cta" href="https://www.instagram.com/mirisek_couture/" target="_blank" rel="noopener">Shop Now</a>
-</header>
+</div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="#" class="nav-logo">MIRISEK<span> COUTURE</span></a>
+  <ul class="nav-links">
+    <li><a href="#collections">Collections</a></li>
+    <li><a href="#process">Our Craft</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-cta" onclick="window.open('https://wa.me/233000000000?text=Hello%20Mirisek%20Couture!%20I%20would%20like%20to%20book%20a%20fitting.','_blank')">Book Fitting</button>
+</nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-grad"></div>
-  <div class="hero-content">
-    <p class="hero-eyebrow">African Luxury Fashion House</p>
-    <h1 class="hero-title">MIRISEK<em>Couture</em></h1>
-    <p class="hero-sub">Luxury African couture inspired by royalty, heritage textiles, and modern editorial elegance.</p>
-    <div class="hero-btns">
-      <button class="btn-gold" onclick="document.getElementById('collections').scrollIntoView({behavior:'smooth'})">Explore Collection</button>
-      <a class="btn-white" href="https://www.instagram.com/mirisek_couture/" target="_blank" rel="noopener">Watch Fashion Film</a>
+  <div class="hero-left">
+    <p class="hero-tag">SS2025 Collection — Accra, Ghana</p>
+    <h1 class="hero-title">Where<br/><em>Africa</em><br/>Meets<br/>Art</h1>
+    <p class="hero-desc">Handcrafted African print fashion that celebrates the richness of the continent — each piece a wearable story, each stitch a tribute to heritage.</p>
+    <div class="hero-actions">
+      <a href="#collections" class="btn-primary">Explore Collection</a>
+      <a href="#process" class="btn-ghost">Our Story</a>
     </div>
   </div>
+  <div class="hero-right">
+    <div class="hero-image-bg">
+      <div class="hero-pattern"></div>
+      <div class="hero-fashion-figure">
+        <div class="fashion-silhouette"></div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll-hint"><span>Scroll</span><div class="scroll-line"></div></div>
 </section>
 
-<!-- FEATURE BAR -->
-<div class="feature-bar">
-  <div class="feature-bar-inner">
-    <div><div class="feat-title">Luxury</div><div class="feat-sub">Couture Identity</div></div>
-    <div><div class="feat-title">Handcrafted</div><div class="feat-sub">African Textiles</div></div>
-    <div><div class="feat-title">Editorial</div><div class="feat-sub">Runway Inspired</div></div>
-    <div><div class="feat-title">Global</div><div class="feat-sub">African Fashion</div></div>
+<!-- MARQUEE -->
+<div class="marquee-section">
+  <div class="marquee-track" id="marqueeTrack">
+    <div class="marquee-item">Kente Weave</div><div class="marquee-item">Ankara Prints</div>
+    <div class="marquee-item">Adire Batik</div><div class="marquee-item">Bogolan Cloth</div>
+    <div class="marquee-item">Wax Print</div><div class="marquee-item">Aso-Oke</div>
+    <div class="marquee-item">Dashiki</div><div class="marquee-item">Accra Ghana</div>
+    <div class="marquee-item">Kente Weave</div><div class="marquee-item">Ankara Prints</div>
+    <div class="marquee-item">Adire Batik</div><div class="marquee-item">Bogolan Cloth</div>
+    <div class="marquee-item">Wax Print</div><div class="marquee-item">Aso-Oke</div>
+    <div class="marquee-item">Dashiki</div><div class="marquee-item">Accra Ghana</div>
   </div>
 </div>
 
+<!-- ABOUT -->
+<section class="about-section" id="about">
+  <div>
+    <p class="section-label reveal">Our Heritage</p>
+    <h2 class="about-title reveal reveal-delay-1">Rooted in<br/><em>tradition,</em><br/>tailored for<br/>today</h2>
+    <p class="about-text reveal reveal-delay-2">Mirisek Couture was born in the heart of Accra, where the vibrant colours of the market and the rhythms of tradition became the foundation of a fashion house unlike any other.</p>
+    <p class="about-text reveal reveal-delay-2">Every piece is conceived with intention — sourcing authentic fabrics directly from artisan weavers across Ghana, Nigeria, Mali and Senegal, then transformed into contemporary silhouettes by our master tailors.</p>
+    <div class="about-stats reveal reveal-delay-3">
+      <div><div class="stat-num">12+</div><div class="stat-label">Years of Craft</div></div>
+      <div><div class="stat-num">40+</div><div class="stat-label">Artisan Partners</div></div>
+      <div><div class="stat-num">6</div><div class="stat-label">Countries Served</div></div>
+    </div>
+  </div>
+  <div class="about-visual reveal reveal-delay-2">
+    <div class="about-card-main"><div class="kente-block" style="background-color:#1C1007;"></div></div>
+    <div class="about-card-accent"><div class="kente-block"></div></div>
+    <div class="about-card-number">MC</div>
+  </div>
+</section>
+
 <!-- COLLECTIONS -->
-<section class="collections" id="collections">
-  <div class="collections-inner">
-    <div class="collections-header">
-      <div>
-        <p class="col-eyebrow">Signature Collections</p>
-        <h2 class="col-title">Editorial Couture</h2>
-      </div>
-      <p class="col-desc">Inspired by Ghanaian royalty, African craftsmanship, and global fashion sophistication.</p>
-    </div>
-    <div class="col-grid">
-      <div class="col-card">
-        <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1974&auto=format&fit=crop" alt="Kente Royale Collection"/>
-        <div class="col-card-grad"></div>
-        <div class="col-card-body">
-          <p class="col-card-sub">Royal Heritage</p>
-          <h3 class="col-card-title">Kente Royale</h3>
-          <button class="col-card-btn">View Collection</button>
-        </div>
-      </div>
-      <div class="col-card">
-        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1887&auto=format&fit=crop" alt="Ankara Noir Collection"/>
-        <div class="col-card-grad"></div>
-        <div class="col-card-body">
-          <p class="col-card-sub">Modern Elegance</p>
-          <h3 class="col-card-title">Ankara Noir</h3>
-          <button class="col-card-btn">View Collection</button>
-        </div>
-      </div>
-      <div class="col-card">
-        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1887&auto=format&fit=crop" alt="Adire Indigo Collection"/>
-        <div class="col-card-grad"></div>
-        <div class="col-card-body">
-          <p class="col-card-sub">Timeless Artistry</p>
-          <h3 class="col-card-title">Adire Indigo</h3>
-          <button class="col-card-btn">View Collection</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- STORY -->
-<section class="story" id="story">
-  <div class="story-inner">
-    <div class="story-img-wrap">
-      <img class="story-img" src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1974&auto=format&fit=crop" alt="Mirisek Couture Story"/>
-      <div class="story-badge">
-        <span class="story-badge-num">2026</span>
-        <span class="story-badge-txt">African Luxury Reimagined</span>
-      </div>
-    </div>
+<section class="collection-section" id="collections">
+  <div class="section-header">
     <div>
-      <p class="story-eyebrow">The Mirisek Story</p>
-      <h2 class="story-title">Fashion Rooted In Heritage</h2>
-      <p class="story-body">Mirisek Couture celebrates the elegance of African identity through luxury silhouettes, handcrafted detailing, and refined couture storytelling.</p>
-      <p class="story-body2">From Kente royalty to Adire artistry, every Mirisek creation embodies prestige, sophistication, and timeless cultural expression.</p>
-      <a class="btn-gold" href="https://www.instagram.com/mirisek_couture/" target="_blank" rel="noopener" style="display:inline-block;">Discover More</a>
+      <p class="section-label reveal">Curated Pieces</p>
+      <h2 class="collection-title reveal reveal-delay-1">The <em>Summer</em><br/>2025 Edit</h2>
+    </div>
+    <a href="https://www.instagram.com/mirisek_couture/" target="_blank" class="view-all reveal">View All Pieces</a>
+  </div>
+  <div class="products-grid">
+    <div class="product-card reveal">
+      <div class="product-visual">
+        <div class="product-bg prod-1">
+          <div class="prod-pattern prod-pattern-kente"></div>
+          <div class="prod-figure"></div>
+          <div class="product-overlay"><a href="https://www.instagram.com/mirisek_couture/" target="_blank" class="overlay-btn">Quick View</a></div>
+        </div>
+        <div class="product-badge">New Arrival</div>
+      </div>
+      <div class="product-info">
+        <div class="product-collection-tag">Kente Heritage</div>
+        <div class="product-name">The Abena Robe</div>
+        <div class="product-footer"><span class="product-price">GH₵ 1,280</span><button class="product-add">+</button></div>
+      </div>
+    </div>
+    <div class="product-card reveal reveal-delay-1">
+      <div class="product-visual">
+        <div class="product-bg prod-2">
+          <div class="prod-pattern prod-pattern-ankara"></div>
+          <div class="prod-figure"></div>
+          <div class="product-overlay"><a href="https://www.instagram.com/mirisek_couture/" target="_blank" class="overlay-btn">Quick View</a></div>
+        </div>
+      </div>
+      <div class="product-info">
+        <div class="product-collection-tag">Ankara Modern</div>
+        <div class="product-name">Ama Wrap Gown</div>
+        <div class="product-footer"><span class="product-price">GH₵ 980</span><button class="product-add">+</button></div>
+      </div>
+    </div>
+    <div class="product-card reveal reveal-delay-2">
+      <div class="product-visual">
+        <div class="product-bg prod-3">
+          <div class="prod-pattern prod-pattern-adire"></div>
+          <div class="prod-figure"></div>
+          <div class="product-overlay"><a href="https://www.instagram.com/mirisek_couture/" target="_blank" class="overlay-btn">Quick View</a></div>
+        </div>
+        <div class="product-badge" style="background:var(--kente-blue);">Limited</div>
+      </div>
+      <div class="product-info">
+        <div class="product-collection-tag">Adire Collection</div>
+        <div class="product-name">Indigo Burst Set</div>
+        <div class="product-footer"><span class="product-price">GH₵ 1,450</span><button class="product-add">+</button></div>
+      </div>
+    </div>
+    <div class="product-card reveal reveal-delay-3">
+      <div class="product-visual">
+        <div class="product-bg prod-4">
+          <div class="prod-pattern prod-pattern-bogolan"></div>
+          <div class="prod-figure"></div>
+          <div class="product-overlay"><a href="https://www.instagram.com/mirisek_couture/" target="_blank" class="overlay-btn">Quick View</a></div>
+        </div>
+      </div>
+      <div class="product-info">
+        <div class="product-collection-tag">Bogolan Earth</div>
+        <div class="product-name">Mali Mud Kaftan</div>
+        <div class="product-footer"><span class="product-price">GH₵ 1,100</span><button class="product-add">+</button></div>
+      </div>
+    </div>
+    <div class="product-card reveal reveal-delay-2">
+      <div class="product-visual">
+        <div class="product-bg prod-5">
+          <div class="prod-pattern prod-pattern-wax"></div>
+          <div class="prod-figure"></div>
+          <div class="product-overlay"><a href="https://www.instagram.com/mirisek_couture/" target="_blank" class="overlay-btn">Quick View</a></div>
+        </div>
+      </div>
+      <div class="product-info">
+        <div class="product-collection-tag">Wax Print</div>
+        <div class="product-name">Accra Gold Coord</div>
+        <div class="product-footer"><span class="product-price">GH₵ 860</span><button class="product-add">+</button></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="testimonials" id="lookbook">
-  <div class="testimonials-inner">
-    <p class="col-eyebrow">Client Experience</p>
-    <h2 class="testi-title">Loved By Fashion Enthusiasts</h2>
-    <div class="testi-grid">
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"Exceptional couture quality and luxurious finishing."</p>
-        <p class="testi-author">Verified Client</p>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"Mirisek blends African heritage with global elegance beautifully."</p>
-        <p class="testi-author">Verified Client</p>
-      </div>
-      <div class="testi-card">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"Every piece feels regal, artistic, and unforgettable."</p>
-        <p class="testi-author">Verified Client</p>
-      </div>
-    </div>
+<!-- PROCESS -->
+<section class="process-section" id="process">
+  <div class="process-header">
+    <p class="section-label reveal" style="justify-content:center;">The Mirisek Method</p>
+    <h2 class="process-title reveal reveal-delay-1">Crafted with<br/><em>intention</em></h2>
+    <p class="process-sub reveal reveal-delay-2">From the looms of village artisans to the ateliers of Accra — every piece follows a sacred path.</p>
+  </div>
+  <div class="process-grid">
+    <div class="process-step reveal"><div class="step-num">01</div><h3 class="step-title">Source</h3><p class="step-text">We travel across West Africa, partnering directly with master weavers and dyers who carry centuries of knowledge in their hands.</p></div>
+    <div class="process-step reveal reveal-delay-1"><div class="step-num">02</div><h3 class="step-title">Design</h3><p class="step-text">Our creative director translates heritage motifs into modern silhouettes — honouring the past while dressing the present.</p></div>
+    <div class="process-step reveal reveal-delay-2"><div class="step-num">03</div><h3 class="step-title">Craft</h3><p class="step-text">Each garment is cut and sewn by hand in our Accra atelier. No shortcuts. Every seam, every hem, every detail considered.</p></div>
+    <div class="process-step reveal reveal-delay-3"><div class="step-num">04</div><h3 class="step-title">Deliver</h3><p class="step-text">Wrapped in our signature cloth packaging and delivered to your door — a gift to yourself, or someone beloved.</p></div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta">
-  <div class="cta-glow"></div>
-  <div class="cta-inner">
-    <p class="cta-eyebrow">Bespoke Luxury Experience</p>
-    <h2 class="cta-title">Wear African Excellence</h2>
-    <p class="cta-sub">Experience couture crafted for prestige, confidence, and timeless sophistication.</p>
-    <div class="cta-btns">
-      <a class="btn-gold" href="https://wa.me/233000000000?text=Hello%20Mirisek%20Couture!%20I%20would%20like%20to%20begin%20my%20couture%20journey." target="_blank" rel="noopener" style="display:inline-block;text-decoration:none;">Begin Your Couture Journey</a>
-      <button class="btn-white" onclick="shareWhatsApp()">Share This Page</button>
-    </div>
+<!-- LOOKBOOK -->
+<section class="lookbook-section">
+  <div class="lookbook-content reveal">
+    <p class="section-label" style="color:var(--clay);">Client Stories</p>
+    <blockquote class="lookbook-quote">Wearing Mirisek is wearing a piece of Africa — it doesn't just drape your body, it carries a story.</blockquote>
+    <p class="lookbook-attribution">— Akosua M., Lagos & London</p>
+    <a href="https://www.instagram.com/mirisek_couture/" target="_blank" class="btn-primary" style="align-self:flex-start;background:var(--clay);color:white;">Read More Stories</a>
+  </div>
+  <div class="lookbook-visual">
+    <div class="lookbook-pattern"></div>
+    <div class="lookbook-num">SS25</div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter-section" id="contact">
+  <p class="section-label reveal" style="justify-content:center;">Stay Connected</p>
+  <h2 class="newsletter-title reveal reveal-delay-1">Join the <em>Mirisek</em> Circle</h2>
+  <p class="newsletter-desc reveal reveal-delay-2">First access to new collections, exclusive fittings and stories from across Africa.</p>
+  <div class="newsletter-form reveal reveal-delay-3">
+    <input type="email" class="newsletter-input" placeholder="Your email address"/>
+    <button class="newsletter-btn">Subscribe</button>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <h3>MIRISEK</h3>
-      <p>African Luxury Reimagined · Accra, Ghana</p>
+  <div class="footer-top">
+    <div>
+      <a href="#" class="footer-logo">MIRISEK<span> COUTURE</span></a>
+      <p class="footer-tagline">African print fashion born in Accra. Worn across the world. Each piece a story, each stitch a tribute.</p>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/mirisek_couture/" target="_blank" class="social-link">Ig</a>
+        <a href="#" class="social-link">Fb</a>
+        <a href="#" class="social-link">Tw</a>
+        <a href="#" class="social-link">Pi</a>
+      </div>
     </div>
-    <div class="footer-links">
-      <a href="https://www.instagram.com/mirisek_couture/" target="_blank" rel="noopener">Instagram</a>
-      <a href="#collections">Lookbook</a>
-      <a href="https://wa.me/233000000000" target="_blank" rel="noopener">Contact</a>
+    <div class="footer-col">
+      <h4>Collections</h4>
+      <ul class="footer-links">
+        <li><a href="#">Kente Heritage</a></li>
+        <li><a href="#">Ankara Modern</a></li>
+        <li><a href="#">Adire Collection</a></li>
+        <li><a href="#">Bogolan Earth</a></li>
+        <li><a href="#">Wax Print</a></li>
+      </ul>
     </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul class="footer-links">
+        <li><a href="#">Our Story</a></li>
+        <li><a href="#">Artisan Partners</a></li>
+        <li><a href="#">Sustainability</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Customer Care</h4>
+      <ul class="footer-links">
+        <li><a href="https://wa.me/233000000000" target="_blank">Book a Fitting</a></li>
+        <li><a href="#">Shipping & Returns</a></li>
+        <li><a href="#">Size Guide</a></li>
+        <li><a href="#">Care Instructions</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2025 Mirisek Couture. All rights reserved. Made in Accra, Ghana.</p>
+    <p class="footer-divider">✦ &nbsp; Crafted with Heritage &nbsp; ✦</p>
+    <p class="footer-copy">Privacy Policy · Terms of Service</p>
   </div>
 </footer>
 
 <script>
 const PAGE_URL='https://eosekre.github.io/mirisek-couture';
-const IG_URL='https://www.instagram.com/mirisek_couture/';
+// Cursor
+const cursor=document.getElementById('cursor'),cursorRing=document.getElementById('cursorRing');
+let mouseX=0,mouseY=0,ringX=0,ringY=0;
+document.addEventListener('mousemove',e=>{mouseX=e.clientX;mouseY=e.clientY;cursor.style.left=mouseX+'px';cursor.style.top=mouseY+'px';});
+function animateRing(){ringX+=(mouseX-ringX)*0.12;ringY+=(mouseY-ringY)*0.12;cursorRing.style.left=ringX+'px';cursorRing.style.top=ringY+'px';requestAnimationFrame(animateRing);}
+animateRing();
+document.querySelectorAll('a,button,.product-card').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cursor.style.width='20px';cursor.style.height='20px';cursorRing.style.width='54px';cursorRing.style.height='54px';});
+  el.addEventListener('mouseleave',()=>{cursor.style.width='12px';cursor.style.height='12px';cursorRing.style.width='36px';cursorRing.style.height='36px';});
+});
+// Nav scroll
+const nav=document.getElementById('mainNav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>80));
+// Scroll reveal
+const reveals=document.querySelectorAll('.reveal');
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:0.12});
+reveals.forEach(el=>obs.observe(el));
+// Share
 function showToast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2800);}
-function shareWhatsApp(){window.open('https://wa.me/?text='+encodeURIComponent('✨ Mirisek Couture — African luxury fashion from Accra, Ghana.\nKente · Ankara · Adire · Bespoke tailoring.\n\n'+PAGE_URL),'_blank');}
+function shareWhatsApp(){window.open('https://wa.me/?text='+encodeURIComponent('✨ Mirisek Couture — African luxury fashion from Accra, Ghana.\nKente · Ankara · Adire · Bogolan\n\n'+PAGE_URL),'_blank');}
 function shareFacebook(){window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(PAGE_URL),'_blank');}
 async function copyLink(){try{await navigator.clipboard.writeText(PAGE_URL);}catch{const e=document.createElement('textarea');e.value=PAGE_URL;document.body.appendChild(e);e.select();document.execCommand('copy');document.body.removeChild(e);}showToast('Link copied!');}
-if(navigator.share){const b=document.createElement('button');b.className='share-btn primary';b.innerHTML='<svg viewBox="0 0 24 24" style="width:10px;height:10px;fill:currentColor"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg> Share';b.onclick=()=>navigator.share({title:'Mirisek Couture',text:'African luxury fashion from Accra, Ghana.',url:PAGE_URL});document.querySelector('.share-bar').prepend(b);}
-// Navbar scroll effect
-window.addEventListener('scroll',()=>{document.querySelector('.navbar').style.background=window.scrollY>60?'rgba(0,0,0,0.85)':'rgba(0,0,0,0.4)';});
+if(navigator.share){const b=document.createElement('button');b.className='share-btn primary';b.innerHTML='Share';b.onclick=()=>navigator.share({title:'Mirisek Couture',text:'African luxury fashion from Accra, Ghana.',url:PAGE_URL});document.querySelector('.share-actions').prepend(b);}
 </script>
 </body>
 </html>
