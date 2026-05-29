@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="Mirisek Couture — African Luxury Fashion, Accra Ghana">
+<meta property="og:description" content="Bespoke African fashion sewn and sold in Accra. Kente, Ankara, Adinkra & more. Commission your piece today.">
+<meta property="og:image" content="https://via.placeholder.com/1200x630/0c0802/c9973a?text=Mirisek+Couture">
+<meta property="og:url" content="https://www.instagram.com/mirisek_couture/">
+<meta name="twitter:card" content="summary_large_image">
+<title>Mirisek Couture — Accra, Ghana</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Josefin+Sans:wght@100;300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #c9973a;
+    --gold-dim: #8b6914;
+    --cream: #ede0c4;
+    --dark: #0c0802;
+    --dark2: #080500;
+    --red: #ce1126;
+    --green: #006b3f;
+    --yellow: #fcd116;
+    --muted: #4a3510;
+    --faint: #2e200a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--dark);
+    color: var(--cream);
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── SHARE BAR ── */
+  .share-bar {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(12,8,2,0.96);
+    backdrop-filter: blur(10px);
+    border-bottom: 0.5px solid #2a1f0a;
+    padding: 10px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .share-logo {
+    font-family: 'IM Fell English', serif;
+    font-size: 14px;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+  }
+  .share-logo em { font-style: italic; color: var(--cream); }
+  .share-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+  .share-btn {
+    padding: 7px 16px;
+    border: 0.5px solid var(--gold-dim);
+    background: transparent;
+    color: var(--gold);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 8px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.25s, color 0.25s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .share-btn:hover, .share-btn.primary {
+    background: var(--gold);
+    color: var(--dark);
+  }
+  .share-btn svg { width: 12px; height: 12px; fill: currentColor; }
+
+  /* ── HERO ── */
+  .hero {
+    padding: 96px 40px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(201,151,58,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .eyebrow {
+    display: flex; align-items: center; justify-content: center;
+    gap: 18px; margin-bottom: 20px;
+    animation: fadeUp 0.9s ease both;
+  }
+  .eyebrow-line { flex: 1; max-width: 110px; height: 0.5px; background: var(--gold-dim); }
+  .eyebrow-text { font-size: 9px; letter-spacing: 0.5em; color: var(--gold-dim); text-transform: uppercase; }
+  .wordmark {
+    font-family: 'IM Fell English', serif;
+    font-size: clamp(42px, 8vw, 80px);
+    color: var(--cream);
+    letter-spacing: 0.1em;
+    line-height: 1;
+    animation: fadeUp 0.9s 0.1s ease both;
+  }
+  .wordmark em { font-style: italic; color: var(--gold); }
+  .wordmark-sub {
+    font-size: 9px; letter-spacing: 0.55em; text-transform: uppercase;
+    color: var(--faint); margin-top: 8px; margin-bottom: 8px;
+    animation: fadeUp 0.9s 0.2s ease both;
+  }
+
+  /* Ghana flag strip */
+  .flag-strip { display: flex; height: 10px; width: 100%; margin: 36px 0 0; }
+  .flag-strip span { flex: 1; }
+
+  /* ── LOCATION BAND ── */
+  .loc-band {
+    border-top: 0.5px solid #2a1f0a;
+    border-bottom: 0.5px solid #2a1f0a;
+    padding: 18px 40px;
+    display: flex; align-items: center; justify-content: center;
+    gap: 28px; flex-wrap: wrap;
+    animation: fadeUp 0.9s 0.3s ease both;
+  }
+  .loc-item { text-align: center; }
+  .loc-name { font-family: 'IM Fell English', serif; font-size: 14px; color: var(--gold); }
+  .loc-area { font-size: 8px; letter-spacing: 0.35em; text-transform: uppercase; color: #3a2a08; margin-top: 2px; }
+  .loc-sep { width: 0.5px; height: 38px; background: #2a1f0a; }
+
+  /* ── LOOKBOOK GRID ── */
+  .lookbook {
+    display: grid;
+    grid-template-columns: 1fr 1.35fr 1fr;
+    gap: 2px;
+    margin-bottom: 2px;
+    animation: fadeUp 0.9s 0.4s ease both;
+  }
+  @media (max-width: 640px) {
+    .lookbook { grid-template-columns: 1fr; }
+  }
+  .look { position: relative; overflow: hidden; cursor: pointer; }
+  .look svg { display: block; width: 100%; transition: transform 0.6s ease; }
+  .look:hover svg { transform: scale(1.04); }
+  .look-label {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 20px 18px 16px;
+    background: linear-gradient(to top, rgba(12,8,2,0.97), transparent);
+  }
+  .look-name { font-family: 'IM Fell English', serif; font-size: 16px; color: var(--cream); display: block; }
+  .look-code { font-size: 8px; letter-spacing: 0.38em; text-transform: uppercase; color: var(--gold-dim); margin-top: 3px; }
+
+  /* ── EDITORIAL ── */
+  .editorial {
+    display: grid; grid-template-columns: 1.1fr 1fr; gap: 0;
+    border-top: 0.5px solid #2a1f0a;
+    animation: fadeUp 0.9s 0.5s ease both;
+  }
+  @media (max-width: 640px) { .editorial { grid-template-columns: 1fr; } }
+  .ed-text { background: #0c0802; padding: 48px 40px; display: flex; flex-direction: column; justify-content: center; }
+  .ed-hl { font-family: 'IM Fell English', serif; font-size: 13px; font-style: italic; color: var(--gold-dim); letter-spacing: 0.1em; margin-bottom: 12px; }
+  .ed-big { font-family: 'IM Fell English', serif; font-size: clamp(22px, 3.5vw, 30px); color: var(--cream); line-height: 1.3; margin-bottom: 18px; }
+  .ed-body { font-size: 11px; letter-spacing: 0.07em; line-height: 1.95; color: var(--muted); }
+  .ed-btns { display: flex; gap: 10px; margin-top: 28px; flex-wrap: wrap; }
+  .btn {
+    padding: 12px 26px;
+    border: 0.5px solid var(--gold-dim);
+    color: var(--gold);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 8px; letter-spacing: 0.45em; text-transform: uppercase;
+    cursor: pointer; background: transparent;
+    transition: background 0.25s, color 0.25s;
+    text-decoration: none; display: inline-block;
+  }
+  .btn:hover, .btn.primary { background: var(--gold); color: var(--dark); }
+
+  /* ── STATS ── */
+  .stats {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+    border-top: 0.5px solid #2a1f0a;
+    border-bottom: 0.5px solid #2a1f0a;
+    animation: fadeUp 0.9s 0.55s ease both;
+  }
+  @media (max-width: 480px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+  .stat { padding: 28px 16px; text-align: center; border-right: 0.5px solid #2a1f0a; }
+  .stat:last-child { border-right: none; }
+  .stat-num { font-family: 'IM Fell English', serif; font-size: 32px; color: var(--gold); display: block; line-height: 1; }
+  .stat-lbl { font-size: 8px; letter-spacing: 0.35em; text-transform: uppercase; color: var(--faint); margin-top: 6px; display: block; }
+
+  /* ── FABRICS ── */
+  .fabrics {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+    border-top: 0.5px solid #2a1f0a;
+    animation: fadeUp 0.9s 0.6s ease both;
+  }
+  @media (max-width: 480px) { .fabrics { grid-template-columns: repeat(2, 1fr); } }
+  .fab { background: var(--dark2); padding: 24px 16px; text-align: center; border-right: 0.5px solid #1a1208; }
+  .fab:last-child { border-right: none; }
+  .fab-sw { width: 36px; height: 36px; border-radius: 50%; margin: 0 auto 12px; }
+  .fab-name { font-family: 'IM Fell English', serif; font-size: 13px; color: var(--gold); display: block; }
+  .fab-origin { font-size: 8px; letter-spacing: 0.3em; text-transform: uppercase; color: #2e200a; margin-top: 3px; }
+
+  /* ── CTA / INSTAGRAM ── */
+  .cta-section {
+    text-align: center; padding: 52px 40px;
+    border-top: 0.5px solid #2a1f0a;
+    animation: fadeUp 0.9s 0.65s ease both;
+  }
+  .cta-hl { font-family: 'IM Fell English', serif; font-size: clamp(24px, 4vw, 38px); font-style: italic; color: var(--cream); margin-bottom: 8px; }
+  .cta-sub { font-size: 9px; letter-spacing: 0.4em; text-transform: uppercase; color: var(--faint); margin-bottom: 32px; }
+  .cta-btns { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+
+  /* ── FOOTER ── */
+  .footer {
+    border-top: 0.5px solid #1a1208;
+    padding: 36px 40px 44px;
+    text-align: center;
+    animation: fadeUp 0.9s 0.7s ease both;
+  }
+  .footer-mark { font-family: 'IM Fell English', serif; font-size: 20px; letter-spacing: 0.25em; color: var(--muted); }
+  .footer-info { font-size: 9px; letter-spacing: 0.3em; color: #2e200a; margin-top: 10px; line-height: 2.2; }
+  .footer-info a { color: var(--gold-dim); text-decoration: none; }
+  .footer-info a:hover { color: var(--gold); }
+  .orn { text-align: center; padding: 16px 0; color: #2e200a; font-size: 12px; letter-spacing: 0.5em; }
+
+  /* ── SHARE TOAST ── */
+  .toast {
+    position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(80px);
+    background: var(--gold); color: var(--dark);
+    font-family: 'Josefin Sans', sans-serif; font-size: 9px; letter-spacing: 0.4em;
+    text-transform: uppercase; padding: 12px 28px;
+    transition: transform 0.4s ease; z-index: 200; pointer-events: none;
+  }
+  .toast.show { transform: translateX(-50%) translateY(0); }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(22px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<!-- SHARE BAR -->
+<div class="share-bar">
+  <div class="share-logo">Mirisek <em>Couture</em></div>
+  <div class="share-actions">
+    <button class="share-btn" onclick="shareWhatsApp()">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp
+    </button>
+    <button class="share-btn" onclick="shareFacebook()">
+      <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      Facebook
+    </button>
+    <button class="share-btn" onclick="shareInstagram()">
+      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      Instagram
+    </button>
+    <button class="share-btn primary" onclick="copyLink()">
+      <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+      Copy Link
+    </button>
+  </div>
+</div>
+
+<div class="toast" id="toast">Link copied!</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="eyebrow">
+    <div class="eyebrow-line"></div>
+    <span class="eyebrow-text">Made in Ghana · Worn by the world</span>
+    <div class="eyebrow-line" style="background: linear-gradient(to left, transparent, var(--gold-dim));"></div>
+  </div>
+  <div class="wordmark">Mirisek <em>Couture</em></div>
+  <div class="wordmark-sub">Accra, Ghana &nbsp;·&nbsp; African luxury atelier &nbsp;·&nbsp; @mirisek_couture</div>
+</div>
+
+<!-- Ghana flag strip -->
+<div class="flag-strip">
+  <span style="background:#006b3f"></span><span style="background:#006b3f"></span>
+  <span style="background:#006b3f"></span><span style="background:#006b3f"></span>
+  <span style="background:#006b3f"></span><span style="background:#006b3f"></span>
+  <span style="background:#fcd116"></span><span style="background:#fcd116"></span>
+  <span style="background:#fcd116"></span><span style="background:#fcd116"></span>
+  <span style="background:#fcd116"></span><span style="background:#fcd116"></span>
+  <span style="background:#ce1126"></span><span style="background:#ce1126"></span>
+  <span style="background:#ce1126"></span><span style="background:#ce1126"></span>
+  <span style="background:#ce1126"></span><span style="background:#ce1126"></span>
+  <span style="background:#fcd116"></span><span style="background:#fcd116"></span>
+  <span style="background:#fcd116"></span><span style="background:#fcd116"></span>
+  <span style="background:#fcd116"></span><span style="background:#fcd116"></span>
+  <span style="background:#006b3f"></span><span style="background:#006b3f"></span>
+  <span style="background:#006b3f"></span><span style="background:#006b3f"></span>
+  <span style="background:#006b3f"></span><span style="background:#006b3f"></span>
+</div>
+
+<!-- LOCATION BAND -->
+<div class="loc-band">
+  <div class="loc-item"><div class="loc-name">Accra</div><div class="loc-area">Atelier &amp; Showroom</div></div>
+  <div class="loc-sep"></div>
+  <div class="loc-item"><div class="loc-name">Kumasi</div><div class="loc-area">Kente Sourcing</div></div>
+  <div class="loc-sep"></div>
+  <div class="loc-item"><div class="loc-name">Bolgatanga</div><div class="loc-area">Artisan Weaving</div></div>
+  <div class="loc-sep"></div>
+  <div class="loc-item"><div class="loc-name">Cape Coast</div><div class="loc-area">Heritage Inspiration</div></div>
+</div>
+
+<!-- LOOKBOOK -->
+<div class="lookbook">
+  <!-- Look 1: Kente -->
+  <div class="look">
+    <svg viewBox="0 0 240 380" xmlns="http://www.w3.org/2000/svg" style="height:380px;">
+      <rect width="240" height="380" fill="#080300"/>
+      <g opacity="0.88">
+        <rect x="0" y="0" width="48" height="380" fill="#006b3f"/>
+        <rect x="48" y="0" width="48" height="380" fill="#fcd116"/>
+        <rect x="96" y="0" width="48" height="380" fill="#ce1126"/>
+        <rect x="144" y="0" width="48" height="380" fill="#fcd116"/>
+        <rect x="192" y="0" width="48" height="380" fill="#006b3f"/>
+      </g>
+      <g fill="rgba(0,0,0,0.48)">
+        <rect x="20" y="0" width="8" height="380"/>
+        <rect x="68" y="0" width="8" height="380"/>
+        <rect x="116" y="0" width="8" height="380"/>
+        <rect x="164" y="0" width="8" height="380"/>
+        <rect x="212" y="0" width="8" height="380"/>
+        <rect x="0" y="22" width="240" height="8"/>
+        <rect x="0" y="64" width="240" height="8"/>
+        <rect x="0" y="106" width="240" height="8"/>
+        <rect x="0" y="148" width="240" height="8"/>
+        <rect x="0" y="190" width="240" height="8"/>
+        <rect x="0" y="232" width="240" height="8"/>
+        <rect x="0" y="274" width="240" height="8"/>
+        <rect x="0" y="316" width="240" height="8"/>
+        <rect x="0" y="358" width="240" height="8"/>
+      </g>
+      <ellipse cx="120" cy="120" rx="24" ry="30" fill="rgba(4,2,0,0.9)"/>
+      <path d="M96 148 Q86 202 80 310 L100 310 Q107 262 120 234 Q133 262 140 310 L160 310 Q154 202 144 148Z" fill="rgba(4,2,0,0.9)"/>
+      <rect x="78" y="153" width="18" height="58" rx="6" fill="rgba(4,2,0,0.86)"/>
+      <rect x="144" y="153" width="18" height="58" rx="6" fill="rgba(4,2,0,0.86)"/>
+    </svg>
+    <div class="look-label">
+      <span class="look-name">Kente Grandeur</span>
+      <span class="look-code">Kumasi · Ashanti heritage</span>
+    </div>
+  </div>
+
+  <!-- Look 2: Adinkra (centrepiece) -->
+  <div class="look">
+    <svg viewBox="0 0 300 380" xmlns="http://www.w3.org/2000/svg" style="height:380px;">
+      <rect width="300" height="380" fill="#050a04"/>
+      <g fill="#006b3f" opacity="0.22">
+        <rect x="0" y="0" width="150" height="190"/>
+        <rect x="150" y="190" width="150" height="190"/>
+      </g>
+      <g fill="#fcd116" opacity="0.14">
+        <rect x="150" y="0" width="150" height="190"/>
+        <rect x="0" y="190" width="150" height="190"/>
+      </g>
+      <g stroke="#fcd116" stroke-width="0.7" fill="none" opacity="0.32">
+        <polygon points="150,22 230,88 200,178 100,178 70,88"/>
+        <polygon points="150,52 198,98 180,158 120,158 102,98"/>
+        <polygon points="150,84 178,108 168,140 132,140 122,108"/>
+      </g>
+      <g fill="#ce1126" opacity="0.18"><circle cx="150" cy="120" r="58"/></g>
+      <g stroke="#ce1126" stroke-width="0.9" fill="none" opacity="0.45">
+        <circle cx="150" cy="120" r="58"/>
+        <circle cx="150" cy="120" r="42"/>
+        <circle cx="150" cy="120" r="26"/>
+      </g>
+      <text x="150" y="128" text-anchor="middle" font-size="22" fill="#fcd116" opacity="0.7" font-family="serif">✦</text>
+      <ellipse cx="150" cy="166" rx="26" ry="32" fill="#050a04" opacity="0.93"/>
+      <path d="M124 196 Q114 250 108 330 L130 330 Q137 284 150 256 Q163 284 170 330 L192 330 Q186 250 176 196Z" fill="#050a04" opacity="0.93)"/>
+      <rect x="106" y="200" width="18" height="60" rx="6" fill="#050a04" opacity="0.89"/>
+      <rect x="176" y="200" width="18" height="60" rx="6" fill="#050a04" opacity="0.89"/>
+    </svg>
+    <div class="look-label" style="background: linear-gradient(to top, rgba(5,10,4,0.98), transparent);">
+      <span style="font-size:8px;letter-spacing:0.42em;text-transform:uppercase;color:#fcd116;display:block;margin-bottom:4px;">— signature look —</span>
+      <span class="look-name" style="font-size:20px;">Adinkra Couture</span>
+      <span class="look-code">Accra · Symbol &amp; silhouette</span>
+    </div>
+  </div>
+
+  <!-- Look 3: Bolga Weave -->
+  <div class="look">
+    <svg viewBox="0 0 240 380" xmlns="http://www.w3.org/2000/svg" style="height:380px;">
+      <rect width="240" height="380" fill="#0a0400"/>
+      <g fill="#c9973a" opacity="0.18">
+        <circle cx="48" cy="48" r="42"/>
+        <circle cx="192" cy="48" r="42"/>
+        <circle cx="120" cy="145" r="56"/>
+        <circle cx="48" cy="250" r="42"/>
+        <circle cx="192" cy="250" r="42"/>
+        <circle cx="90" cy="340" r="34"/>
+        <circle cx="165" cy="340" r="30"/>
+      </g>
+      <g stroke="#c9973a" stroke-width="0.9" fill="none" opacity="0.42">
+        <circle cx="48" cy="48" r="42"/><circle cx="48" cy="48" r="28"/><circle cx="48" cy="48" r="14"/>
+        <circle cx="192" cy="48" r="42"/><circle cx="192" cy="48" r="28"/>
+        <circle cx="120" cy="145" r="56"/><circle cx="120" cy="145" r="40"/><circle cx="120" cy="145" r="24"/>
+        <circle cx="48" cy="250" r="42"/><circle cx="48" cy="250" r="26"/>
+        <circle cx="192" cy="250" r="42"/><circle cx="192" cy="250" r="26"/><circle cx="192" cy="250" r="10"/>
+      </g>
+      <g stroke="#ce1126" stroke-width="0.5" fill="none" opacity="0.22">
+        <line x1="0" y1="0" x2="240" y2="380"/>
+        <line x1="240" y1="0" x2="0" y2="380"/>
+        <line x1="120" y1="0" x2="120" y2="380"/>
+        <line x1="0" y1="190" x2="240" y2="190"/>
+      </g>
+      <ellipse cx="120" cy="170" rx="22" ry="28" fill="#0a0400" opacity="0.91"/>
+      <path d="M98 196 Q90 244 86 320 L106 320 Q112 276 120 252 Q128 276 134 320 L154 320 Q150 244 142 196Z" fill="#0a0400" opacity="0.91"/>
+      <rect x="84" y="200" width="16" height="54" rx="5" fill="#0a0400" opacity="0.87"/>
+      <rect x="140" y="200" width="16" height="54" rx="5" fill="#0a0400" opacity="0.87"/>
+    </svg>
+    <div class="look-label">
+      <span class="look-name">Bolga Weave</span>
+      <span class="look-code">Upper East · Artisan craft</span>
+    </div>
+  </div>
+</div>
+
+<!-- EDITORIAL -->
+<div class="editorial">
+  <div class="ed-text">
+    <div class="ed-hl">Proudly sewn in Accra</div>
+    <div class="ed-big">Ghana's finest threads, shaped into your story</div>
+    <p class="ed-body">From Kente woven in the Ashanti heartland to hand-dyed Smock cloth from the Upper East, every Mirisek garment begins its life on Ghanaian soil.<br><br>We sew, we sell, and we celebrate — because wearing Africa starts right here.</p>
+    <div class="ed-btns">
+      <a class="btn primary" href="https://www.instagram.com/mirisek_couture/" target="_blank" rel="noopener">View on Instagram ↗</a>
+      <a class="btn" href="https://wa.me/233000000000?text=Hello%20Mirisek%20Couture!%20I%20would%20like%20to%20book%20a%20fitting." target="_blank" rel="noopener">Book a fitting ↗</a>
+    </div>
+  </div>
+
+  <svg viewBox="0 0 340 340" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:340px;">
+    <rect width="340" height="340" fill="#060402"/>
+    <g fill="#006b3f" opacity="0.1"><polygon points="0,0 170,0 0,170"/><polygon points="340,340 170,340 340,170"/></g>
+    <g fill="#ce1126" opacity="0.07"><polygon points="170,0 340,0 340,170"/><polygon points="0,340 170,340 0,170"/></g>
+    <g fill="#fcd116" opacity="0.06"><rect x="110" y="110" width="120" height="120"/></g>
+    <g stroke="#fcd116" stroke-width="0.5" fill="none" opacity="0.2">
+      <line x1="0" y1="0" x2="340" y2="340"/>
+      <line x1="340" y1="0" x2="0" y2="340"/>
+      <line x1="170" y1="0" x2="170" y2="340"/>
+      <line x1="0" y1="170" x2="340" y2="170"/>
+    </g>
+    <g stroke="#c9973a" stroke-width="0.8" fill="none" opacity="0.5">
+      <rect x="55" y="55" width="230" height="230" rx="2"/>
+      <rect x="76" y="76" width="188" height="188" rx="2"/>
+    </g>
+    <circle cx="170" cy="118" r="28" fill="#fcd116" opacity="0.08"/>
+    <circle cx="170" cy="118" r="18" fill="#fcd116" opacity="0.14"/>
+    <circle cx="170" cy="118" r="9" fill="#fcd116" opacity="0.3"/>
+    <circle cx="170" cy="118" r="3.5" fill="#fcd116" opacity="0.7"/>
+    <path d="M153 144 Q145 190 141 272 L159 272 Q164 235 170 212 Q176 235 181 272 L199 272 Q195 190 187 144Z" fill="#060402" opacity="0.93"/>
+    <rect x="139" y="148" width="15" height="52" rx="5" fill="#060402" opacity="0.89"/>
+    <rect x="186" y="148" width="15" height="52" rx="5" fill="#060402" opacity="0.89"/>
+    <text x="170" y="300" text-anchor="middle" fill="#3a2a08" font-size="7" font-family="'Josefin Sans',sans-serif" letter-spacing="4">ACCRA · GHANA · GH</text>
+    <text x="170" y="320" text-anchor="middle" fill="#2e200a" font-size="10" font-family="'IM Fell English',serif" letter-spacing="3">Mirisek Couture</text>
+  </svg>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat"><span class="stat-num">100%</span><span class="stat-lbl">African-sourced cloth</span></div>
+  <div class="stat"><span class="stat-num">Bespoke</span><span class="stat-lbl">Made to your measure</span></div>
+  <div class="stat"><span class="stat-num">3+</span><span class="stat-lbl">Collections per season</span></div>
+  <div class="stat"><span class="stat-num">Accra</span><span class="stat-lbl">Based &amp; crafted here</span></div>
+</div>
+
+<!-- FABRICS -->
+<div class="fabrics">
+  <div class="fab">
+    <div class="fab-sw" style="background:#c9973a;"></div>
+    <span class="fab-name">Kente cloth</span>
+    <span class="fab-origin">Kumasi, Ashanti</span>
+  </div>
+  <div class="fab">
+    <div class="fab-sw" style="background:#006b3f;"></div>
+    <span class="fab-name">Batakari smock</span>
+    <span class="fab-origin">Upper East Region</span>
+  </div>
+  <div class="fab">
+    <div class="fab-sw" style="background:#ce1126;"></div>
+    <span class="fab-name">Ankara wax print</span>
+    <span class="fab-origin">West Africa</span>
+  </div>
+  <div class="fab">
+    <div class="fab-sw" style="background:#4a3510;"></div>
+    <span class="fab-name">Adinkra cloth</span>
+    <span class="fab-origin">Ntonso, Ashanti</span>
+  </div>
+</div>
+
+<div class="orn">— ✦ —</div>
+
+<!-- CTA -->
+<div class="cta-section">
+  <div class="cta-hl">"Dressed in Africa, from Accra to the world"</div>
+  <div class="cta-sub">Commission · Ready-to-wear · Bridal · Occasions</div>
+  <div class="cta-btns">
+    <a class="btn primary" href="https://www.instagram.com/mirisek_couture/" target="_blank" rel="noopener">
+      <svg style="width:12px;height:12px;fill:currentColor;vertical-align:middle;margin-right:6px;" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      @mirisek_couture
+    </a>
+    <a class="btn" href="https://wa.me/233000000000?text=Hello%20Mirisek%20Couture!%20I%20would%20like%20to%20enquire%20about%20your%20collections." target="_blank" rel="noopener">WhatsApp Us ↗</a>
+    <button class="btn" onclick="shareWhatsApp()">Share this advert ↗</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-mark">Mirisek Couture</div>
+  <div class="footer-info">
+    Accra, Ghana<br>
+    <a href="https://www.instagram.com/mirisek_couture/" target="_blank">@mirisek_couture</a> &nbsp;·&nbsp;
+    <a href="mailto:enquiries@mirisekfashions.com">enquiries@mirisekfashions.com</a><br>
+    Call / WhatsApp: +233 — — — — — —
+  </div>
+</div>
+
+<script>
+  const PAGE_URL = window.location.href;
+  const PAGE_TITLE = 'Mirisek Couture — African Luxury Fashion, Accra Ghana';
+  const IG_URL = 'https://www.instagram.com/mirisek_couture/';
+
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2800);
+  }
+
+  function shareWhatsApp() {
+    const text = encodeURIComponent('✨ Check out Mirisek Couture — African luxury fashion sewn in Accra, Ghana!\n\nKente, Ankara, Adinkra & more. Bespoke tailoring & ready-to-wear.\n\nInstagram: ' + IG_URL + '\n\n' + PAGE_URL);
+    window.open('https://wa.me/?text=' + text, '_blank');
+  }
+
+  function shareFacebook() {
+    window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(IG_URL), '_blank');
+  }
+
+  function shareInstagram() {
+    window.open(IG_URL, '_blank');
+    showToast('Opening Instagram…');
+  }
+
+  async function copyLink() {
+    const text = PAGE_URL + '\n\nMirisek Couture — African luxury fashion from Accra, Ghana. @mirisek_couture';
+    try {
+      await navigator.clipboard.writeText(text);
+      showToast('Link copied!');
+    } catch {
+      const el = document.createElement('textarea');
+      el.value = text;
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand('copy');
+      document.body.removeChild(el);
+      showToast('Link copied!');
+    }
+  }
+
+  // Native share API (mobile)
+  if (navigator.share) {
+    const nativeBtn = document.createElement('button');
+    nativeBtn.className = 'share-btn primary';
+    nativeBtn.innerHTML = '<svg viewBox="0 0 24 24" style="width:12px;height:12px;fill:currentColor"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg> Share';
+    nativeBtn.onclick = () => {
+      navigator.share({ title: PAGE_TITLE, text: 'Mirisek Couture — African luxury fashion from Accra, Ghana.', url: IG_URL });
+    };
+    document.querySelector('.share-actions').prepend(nativeBtn);
+  }
+</script>
+</body>
+</html>
