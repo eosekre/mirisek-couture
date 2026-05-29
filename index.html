@@ -4,443 +4,399 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:title" content="Mirisek Couture — African Luxury Fashion House">
-<meta property="og:description" content="Where African heritage meets modern luxury — handcrafted couture inspired by Kente, Ankara, and Adire artistry. Accra, Ghana.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop">
+<meta property="og:description" content="Luxury African couture inspired by royalty, heritage textiles, and modern editorial elegance. Accra, Ghana.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1200&auto=format&fit=crop">
 <meta property="og:url" content="https://eosekre.github.io/mirisek-couture">
 <meta name="twitter:card" content="summary_large_image">
 <title>Mirisek Couture — African Luxury Fashion House</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,300;1,400&family=Josefin+Sans:wght@200;300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,300;1,400&family=Josefin+Sans:wght@200;300;400;600&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root {
-    --amber: #f59e0b;
-    --amber-light: #fcd34d;
-    --amber-dim: #92400e;
-    --white: #ffffff;
-    --gray-3: #d1d5db;
-    --gray-4: #9ca3af;
-    --gray-5: #6b7280;
-    --zinc-8: #27272a;
-    --zinc-9: #18181b;
-    --zinc-95: #0f0f10;
-    --black: #000000;
-  }
-  html { scroll-behavior: smooth; }
-  body {
-    background: var(--black);
-    color: var(--white);
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 300;
-    overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
-  }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --amber:#f59e0b; --amber-light:#fcd34d; --amber-200:#fde68a;
+  --white:#fff; --gray-3:#d1d5db; --gray-4:#9ca3af; --gray-5:#6b7280;
+  --zinc-8:#27272a; --zinc-9:#18181b; --bg:#050505; --bg2:#080808; --bg3:#0b0b0b;
+}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--white);font-family:'Josefin Sans',sans-serif;font-weight:300;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+img{display:block;max-width:100%;}
 
-  /* ── SHARE BAR ── */
-  .share-bar {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-    background: rgba(0,0,0,0.85);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid #27272a;
-    padding: 10px 24px;
-    display: flex; align-items: center; justify-content: space-between; gap: 12px;
-  }
-  .share-logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 15px; letter-spacing: 0.15em; color: var(--amber);
-  }
-  .share-logo em { font-style: italic; color: var(--white); }
-  .share-actions { display: flex; gap: 8px; flex-wrap: wrap; }
-  .share-btn {
-    padding: 7px 16px;
-    border: 1px solid #3f3f46;
-    background: transparent; color: var(--amber);
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 8px; letter-spacing: 0.4em; text-transform: uppercase;
-    cursor: pointer; border-radius: 999px;
-    transition: background 0.25s, color 0.25s, border-color 0.25s;
-    display: inline-flex; align-items: center; gap: 6px;
-    text-decoration: none;
-  }
-  .share-btn:hover { background: var(--amber); color: var(--black); border-color: var(--amber); }
-  .share-btn.primary { background: var(--amber); color: var(--black); border-color: var(--amber); }
-  .share-btn svg { width: 11px; height: 11px; fill: currentColor; flex-shrink: 0; }
+/* ── SHARE BAR ── */
+.share-bar{
+  position:fixed;top:0;left:0;right:0;z-index:300;
+  background:rgba(0,0,0,0.6);backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,0.08);
+  padding:8px 24px;display:flex;align-items:center;justify-content:flex-end;gap:8px;
+}
+.share-btn{
+  padding:6px 14px;border:1px solid #3f3f46;background:transparent;
+  color:var(--amber);font-family:'Josefin Sans',sans-serif;
+  font-size:8px;letter-spacing:0.4em;text-transform:uppercase;
+  cursor:pointer;border-radius:999px;
+  transition:background .25s,color .25s,border-color .25s;
+  display:inline-flex;align-items:center;gap:5px;
+}
+.share-btn:hover,.share-btn.primary{background:var(--amber);color:#000;border-color:var(--amber);}
+.share-btn svg{width:10px;height:10px;fill:currentColor;flex-shrink:0;}
 
-  /* ── HERO ── */
-  .hero {
-    position: relative; min-height: 100vh;
-    display: flex; align-items: center; justify-content: center;
-    padding: 80px 24px 40px;
-    overflow: hidden;
-  }
-  .hero-bg {
-    position: absolute; inset: 0;
-    background: url('https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1974&auto=format&fit=crop') center/cover no-repeat;
-    opacity: 0.3;
-  }
-  .hero-grad {
-    position: absolute; inset: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 50%, #000 100%);
-  }
-  .hero-content { position: relative; z-index: 10; text-align: center; max-width: 900px; }
-  .hero-eyebrow {
-    letter-spacing: 0.4em; text-transform: uppercase;
-    color: var(--amber); font-size: 13px; margin-bottom: 24px;
-    animation: fadeUp 1s ease both;
-  }
-  .hero-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(52px, 10vw, 112px);
-    font-weight: 700; line-height: 1.0; margin-bottom: 24px;
-    animation: fadeUp 1s 0.1s ease both;
-  }
-  .hero-title em {
-    display: block; font-style: italic; font-weight: 300;
-    color: var(--amber-light);
-  }
-  .hero-sub {
-    color: var(--gray-3); max-width: 640px; margin: 0 auto 40px;
-    font-size: clamp(15px, 2vw, 20px); line-height: 1.7;
-    animation: fadeUp 1s 0.2s ease both;
-  }
-  .hero-btns {
-    display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;
-    animation: fadeUp 1s 0.3s ease both;
-  }
-  .btn-primary {
-    background: var(--amber); color: var(--black);
-    padding: 16px 36px; border-radius: 999px;
-    font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 600;
-    border: none; cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
-    font-family: 'Josefin Sans', sans-serif;
-  }
-  .btn-primary:hover { transform: scale(1.05); box-shadow: 0 20px 40px rgba(245,158,11,0.3); }
-  .btn-outline {
-    background: transparent; color: var(--white);
-    padding: 16px 36px; border-radius: 999px;
-    border: 1px solid var(--white);
-    font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase;
-    cursor: pointer; transition: background 0.3s, color 0.3s;
-    font-family: 'Josefin Sans', sans-serif;
-    text-decoration: none; display: inline-block;
-  }
-  .btn-outline:hover { background: var(--white); color: var(--black); }
+/* ── NAVBAR ── */
+.navbar{
+  position:fixed;top:36px;left:0;right:0;z-index:200;
+  background:rgba(0,0,0,0.4);backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(255,255,255,0.08);
+  padding:20px 40px;display:flex;align-items:center;justify-content:space-between;
+}
+.nav-brand h1{font-family:'Josefin Sans',sans-serif;font-size:22px;letter-spacing:0.3em;font-weight:700;}
+.nav-brand p{font-size:9px;text-transform:uppercase;letter-spacing:0.4em;color:var(--amber-light);margin-top:2px;}
+.nav-links{display:flex;gap:40px;font-size:12px;text-transform:uppercase;letter-spacing:0.2em;color:var(--gray-3);}
+.nav-links a:hover{color:var(--amber-light);}
+@media(max-width:768px){.nav-links{display:none;}}
+.nav-cta{
+  border:1px solid var(--amber);color:var(--amber-light);
+  padding:9px 22px;border-radius:999px;
+  font-size:10px;text-transform:uppercase;letter-spacing:0.3em;
+  cursor:pointer;background:transparent;font-family:'Josefin Sans',sans-serif;
+  transition:background .3s,color .3s;
+}
+.nav-cta:hover{background:var(--amber);color:#000;}
 
-  /* ── BRAND STATEMENT ── */
-  .brand-section {
-    padding: 96px 24px; background: var(--zinc-95);
-  }
-  .brand-inner {
-    max-width: 1152px; margin: 0 auto;
-    display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
-  }
-  @media (max-width: 768px) { .brand-inner { grid-template-columns: 1fr; } }
-  .section-eyebrow {
-    color: var(--amber); text-transform: uppercase; letter-spacing: 0.3em;
-    font-size: 11px; margin-bottom: 16px;
-  }
-  .section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(32px, 5vw, 60px); line-height: 1.15; margin-bottom: 24px;
-  }
-  .section-title em { font-style: italic; color: var(--amber-light); }
-  .brand-body { color: var(--gray-4); font-size: 17px; line-height: 1.8; margin-bottom: 16px; }
-  .brand-body2 { color: var(--gray-5); line-height: 1.8; }
-  .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .stat-card {
-    background: var(--zinc-9); border-radius: 24px; padding: 32px;
-    border: 1px solid var(--zinc-8);
-  }
-  .stat-card.wide { grid-column: span 2; }
-  .stat-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 48px; font-weight: 700; color: var(--amber); display: block; margin-bottom: 8px;
-  }
-  .stat-lbl { color: var(--gray-4); text-transform: uppercase; letter-spacing: 0.2em; font-size: 11px; }
+/* ── HERO ── */
+.hero{
+  position:relative;height:100vh;min-height:600px;
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;padding:80px 24px 40px;overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:url('https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1887&auto=format&fit=crop') center/cover no-repeat;
+  transform:scale(1.05);
+}
+.hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.7);}
+.hero-grad{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.2) 50%,#050505 100%);}
+.hero-content{position:relative;z-index:10;max-width:1000px;margin-top:80px;}
+.hero-eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:0.5em;color:var(--amber-light);margin-bottom:24px;animation:fadeUp 1s ease both;}
+.hero-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(56px,12vw,144px);font-weight:700;line-height:0.95;margin-bottom:32px;
+  animation:fadeUp 1s 0.1s ease both;
+}
+.hero-title em{display:block;font-style:italic;font-weight:300;color:var(--amber-200);}
+.hero-sub{
+  font-size:clamp(15px,2.2vw,22px);color:var(--gray-3);
+  max-width:720px;margin:0 auto 40px;line-height:1.7;
+  animation:fadeUp 1s 0.2s ease both;
+}
+.hero-btns{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;animation:fadeUp 1s 0.3s ease both;}
+.btn-gold{
+  background:var(--amber);color:#000;
+  padding:20px 44px;border-radius:999px;border:none;
+  font-size:10px;text-transform:uppercase;letter-spacing:0.3em;font-weight:600;
+  cursor:pointer;font-family:'Josefin Sans',sans-serif;
+  transition:transform .3s,box-shadow .3s;
+  box-shadow:0 25px 50px rgba(245,158,11,0.2);
+}
+.btn-gold:hover{transform:scale(1.05);box-shadow:0 25px 60px rgba(245,158,11,0.35);}
+.btn-white{
+  background:transparent;color:var(--white);
+  padding:20px 44px;border-radius:999px;
+  border:1px solid var(--white);
+  font-size:10px;text-transform:uppercase;letter-spacing:0.3em;
+  cursor:pointer;font-family:'Josefin Sans',sans-serif;
+  transition:background .3s,color .3s;
+  display:inline-block;
+}
+.btn-white:hover{background:var(--white);color:#000;}
 
-  /* ── COLLECTIONS ── */
-  .collections-section { padding: 96px 24px; }
-  .collections-inner { max-width: 1280px; margin: 0 auto; }
-  .section-header { text-align: center; margin-bottom: 80px; }
-  .section-header-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(40px, 7vw, 80px); font-style: italic;
-  }
-  .collections-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
-  }
-  @media (max-width: 900px) { .collections-grid { grid-template-columns: 1fr; } }
-  .collection-card {
-    position: relative; overflow: hidden; border-radius: 32px;
-    height: 600px; cursor: pointer;
-  }
-  .collection-card.featured {
-    margin-top: -40px;
-    border: 1px solid rgba(245,158,11,0.3);
-    box-shadow: 0 25px 60px rgba(245,158,11,0.1);
-  }
-  @media (max-width: 900px) { .collection-card.featured { margin-top: 0; } }
-  .collection-card img {
-    width: 100%; height: 100%; object-fit: cover;
-    transition: transform 0.7s ease;
-  }
-  .collection-card:hover img { transform: scale(1.1); }
-  .card-grad {
-    position: absolute; inset: 0;
-    background: linear-gradient(to top, #000 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
-  }
-  .card-body { position: absolute; bottom: 0; padding: 32px; }
-  .card-eyebrow {
-    text-transform: uppercase; letter-spacing: 0.3em; color: var(--amber-light);
-    font-size: 10px; margin-bottom: 12px;
-  }
-  .card-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 36px; font-style: italic; margin-bottom: 12px;
-  }
-  .card-desc { color: var(--gray-3); line-height: 1.6; font-size: 14px; }
+/* ── FEATURE BAR ── */
+.feature-bar{border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08);background:#000;padding:24px 40px;}
+.feature-bar-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;}
+@media(max-width:640px){.feature-bar-inner{grid-template-columns:repeat(2,1fr);}}
+.feat-title{font-family:'Playfair Display',serif;font-size:22px;color:var(--amber-light);margin-bottom:4px;}
+.feat-sub{font-size:9px;text-transform:uppercase;letter-spacing:0.3em;color:var(--gray-5);}
 
-  /* ── MATERIALS ── */
-  .materials-section { padding: 96px 24px; background: var(--zinc-95); }
-  .materials-inner { max-width: 1152px; margin: 0 auto; text-align: center; }
-  .materials-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 64px;
-  }
-  @media (max-width: 768px) { .materials-grid { grid-template-columns: 1fr; } }
-  .material-card {
-    border: 1px solid var(--zinc-8); border-radius: 24px; padding: 40px;
-    background: var(--black);
-    transition: border-color 0.3s;
-  }
-  .material-card:hover { border-color: var(--amber); }
-  .material-name {
-    font-family: 'Playfair Display', serif;
-    font-size: 30px; font-style: italic; color: var(--amber-light);
-    margin-bottom: 16px;
-  }
-  .material-desc { color: var(--gray-4); line-height: 1.7; }
+/* ── COLLECTIONS ── */
+.collections{padding:112px 24px;background:var(--bg2);}
+.collections-inner{max-width:1280px;margin:0 auto;}
+.collections-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:80px;gap:32px;flex-wrap:wrap;}
+.col-eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:0.4em;color:var(--amber-light);margin-bottom:16px;}
+.col-title{font-family:'Playfair Display',serif;font-size:clamp(40px,7vw,80px);font-style:italic;line-height:1.1;}
+.col-desc{color:var(--gray-4);max-width:480px;line-height:1.8;font-size:16px;}
+.col-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;}
+@media(max-width:900px){.col-grid{grid-template-columns:1fr;}}
+.col-card{position:relative;overflow:hidden;border-radius:32px;height:700px;background:#000;cursor:pointer;}
+.col-card img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease;}
+.col-card:hover img{transform:scale(1.1);}
+.col-card-grad{position:absolute;inset:0;background:linear-gradient(to top,#000 0%,rgba(0,0,0,0.3) 50%,transparent 100%);}
+.col-card-body{position:absolute;bottom:0;padding:40px;}
+.col-card-sub{font-size:9px;text-transform:uppercase;letter-spacing:0.3em;color:var(--amber-light);margin-bottom:16px;}
+.col-card-title{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,48px);font-style:italic;margin-bottom:20px;}
+.col-card-btn{
+  border:1px solid var(--white);padding:12px 28px;border-radius:999px;
+  font-size:9px;text-transform:uppercase;letter-spacing:0.3em;
+  background:transparent;color:var(--white);cursor:pointer;font-family:'Josefin Sans',sans-serif;
+  transition:background .3s,color .3s;
+}
+.col-card-btn:hover{background:var(--white);color:#000;}
 
-  /* ── CTA ── */
-  .cta-section {
-    padding: 128px 24px; text-align: center; position: relative;
-  }
-  .cta-glow {
-    position: absolute; inset: 0;
-    background: linear-gradient(to right, rgba(245,158,11,0.1), transparent, rgba(245,158,11,0.1));
-    pointer-events: none;
-  }
-  .cta-inner { position: relative; z-index: 10; max-width: 896px; margin: 0 auto; }
-  .cta-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(40px, 7vw, 80px); line-height: 1.15; margin-bottom: 32px;
-  }
-  .cta-title em { font-style: italic; color: var(--amber-light); }
-  .cta-sub { color: var(--gray-4); font-size: 17px; line-height: 1.7; margin-bottom: 40px; max-width: 640px; margin-left: auto; margin-right: auto; }
+/* ── STORY ── */
+.story{padding:128px 24px;background:#000;}
+.story-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+@media(max-width:900px){.story-inner{grid-template-columns:1fr;}}
+.story-img-wrap{position:relative;}
+.story-img{border-radius:32px;height:750px;width:100%;object-fit:cover;}
+.story-badge{
+  position:absolute;bottom:-32px;right:-32px;
+  background:var(--amber);color:#000;
+  padding:40px;border-radius:32px;
+  box-shadow:0 25px 50px rgba(0,0,0,0.5);
+  max-width:280px;
+}
+@media(max-width:900px){.story-badge{position:static;margin-top:24px;max-width:100%;border-radius:24px;}}
+.story-badge-num{font-family:'Playfair Display',serif;font-size:56px;font-weight:700;display:block;line-height:1;margin-bottom:8px;}
+.story-badge-txt{font-size:9px;text-transform:uppercase;letter-spacing:0.3em;font-weight:600;}
+.story-eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:0.4em;color:var(--amber-light);margin-bottom:20px;}
+.story-title{font-family:'Playfair Display',serif;font-size:clamp(40px,6vw,72px);font-style:italic;line-height:1.15;margin-bottom:32px;}
+.story-body{color:var(--gray-4);font-size:17px;line-height:1.8;margin-bottom:24px;}
+.story-body2{color:var(--gray-5);line-height:1.8;margin-bottom:40px;}
 
-  /* ── FOOTER ── */
-  footer {
-    border-top: 1px solid var(--zinc-8);
-    padding: 40px 24px; text-align: center;
-    color: var(--gray-5); font-size: 13px;
-  }
-  footer a { color: var(--amber); text-decoration: none; }
-  footer a:hover { color: var(--amber-light); }
+/* ── TESTIMONIALS ── */
+.testimonials{padding:112px 24px;background:var(--bg3);border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08);}
+.testimonials-inner{max-width:1152px;margin:0 auto;text-align:center;}
+.testi-title{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,72px);font-style:italic;margin-bottom:80px;}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;}
+@media(max-width:768px){.testi-grid{grid-template-columns:1fr;}}
+.testi-card{background:#000;border:1px solid rgba(255,255,255,0.08);border-radius:32px;padding:40px;}
+.testi-stars{color:var(--amber-light);font-size:24px;margin-bottom:20px;letter-spacing:4px;}
+.testi-text{color:var(--gray-3);font-size:17px;line-height:1.7;margin-bottom:24px;font-style:italic;}
+.testi-author{font-size:9px;text-transform:uppercase;letter-spacing:0.3em;color:var(--gray-5);}
 
-  /* ── TOAST ── */
-  .toast {
-    position: fixed; bottom: 24px; left: 50%;
-    transform: translateX(-50%) translateY(80px);
-    background: var(--amber); color: var(--black);
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 9px; letter-spacing: 0.4em; text-transform: uppercase;
-    padding: 12px 28px; border-radius: 999px;
-    transition: transform 0.4s ease; z-index: 300; pointer-events: none;
-  }
-  .toast.show { transform: translateX(-50%) translateY(0); }
+/* ── CTA ── */
+.cta{position:relative;padding:144px 24px;text-align:center;overflow:hidden;}
+.cta-glow{position:absolute;inset:0;background:radial-gradient(circle at center,rgba(251,191,36,0.18),transparent 60%);pointer-events:none;}
+.cta-inner{position:relative;z-index:10;max-width:896px;margin:0 auto;}
+.cta-eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:0.5em;color:var(--amber-light);margin-bottom:24px;}
+.cta-title{font-family:'Playfair Display',serif;font-size:clamp(48px,9vw,96px);font-style:italic;line-height:1.1;margin-bottom:32px;}
+.cta-sub{color:var(--gray-4);font-size:19px;line-height:1.7;margin-bottom:48px;max-width:640px;margin-left:auto;margin-right:auto;}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
 
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+/* ── FOOTER ── */
+footer{border-top:1px solid rgba(255,255,255,0.08);padding:48px 40px;background:#000;}
+.footer-inner{max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;}
+.footer-brand h3{font-family:'Josefin Sans',sans-serif;font-size:22px;letter-spacing:0.3em;font-weight:700;}
+.footer-brand p{color:var(--gray-5);font-size:9px;text-transform:uppercase;letter-spacing:0.3em;margin-top:8px;}
+.footer-links{display:flex;gap:32px;font-size:10px;text-transform:uppercase;letter-spacing:0.3em;color:var(--gray-4);}
+.footer-links a:hover{color:var(--amber-light);}
+
+/* ── TOAST ── */
+.toast{
+  position:fixed;bottom:24px;left:50%;
+  transform:translateX(-50%) translateY(80px);
+  background:var(--amber);color:#000;
+  font-family:'Josefin Sans',sans-serif;font-size:9px;letter-spacing:0.4em;text-transform:uppercase;
+  padding:12px 28px;border-radius:999px;
+  transition:transform .4s ease;z-index:400;pointer-events:none;
+}
+.toast.show{transform:translateX(-50%) translateY(0);}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(24px);}
+  to{opacity:1;transform:translateY(0);}
+}
 </style>
 </head>
 <body>
 
 <!-- SHARE BAR -->
 <div class="share-bar">
-  <div class="share-logo">Mirisek <em>Couture</em></div>
-  <div class="share-actions">
-    <button class="share-btn" onclick="shareWhatsApp()">
-      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      WhatsApp
-    </button>
-    <button class="share-btn" onclick="shareFacebook()">
-      <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-      Facebook
-    </button>
-    <a class="share-btn" href="https://www.instagram.com/mirisek_couture/" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-      Instagram
-    </a>
-    <button class="share-btn primary" onclick="copyLink()">
-      <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
-      Copy Link
-    </button>
-  </div>
+  <button class="share-btn" onclick="shareWhatsApp()">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WhatsApp
+  </button>
+  <button class="share-btn" onclick="shareFacebook()">
+    <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+    Facebook
+  </button>
+  <a class="share-btn" href="https://www.instagram.com/mirisek_couture/" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+    Instagram
+  </a>
+  <button class="share-btn primary" onclick="copyLink()">
+    <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+    Copy Link
+  </button>
 </div>
 
 <div class="toast" id="toast">Copied!</div>
 
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="nav-brand">
+    <h1>MIRISEK</h1>
+    <p>Couture</p>
+  </div>
+  <nav class="nav-links">
+    <a href="#collections">Collections</a>
+    <a href="#lookbook">Lookbook</a>
+    <a href="#story">Bespoke</a>
+    <a href="#story">About</a>
+  </nav>
+  <a class="nav-cta" href="https://www.instagram.com/mirisek_couture/" target="_blank" rel="noopener">Shop Now</a>
+</header>
+
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
   <div class="hero-grad"></div>
   <div class="hero-content">
     <p class="hero-eyebrow">African Luxury Fashion House</p>
     <h1 class="hero-title">MIRISEK<em>Couture</em></h1>
-    <p class="hero-sub">Where African heritage meets modern luxury — handcrafted couture inspired by Kente, Ankara, and Adire artistry.</p>
+    <p class="hero-sub">Luxury African couture inspired by royalty, heritage textiles, and modern editorial elegance.</p>
     <div class="hero-btns">
-      <button class="btn-primary" onclick="document.querySelector('.collections-section').scrollIntoView({behavior:'smooth'})">Explore Collections</button>
-      <a class="btn-outline" href="https://wa.me/233000000000?text=Hello%20Mirisek%20Couture!%20I'd%20like%20to%20book%20a%20bespoke%20consultation." target="_blank" rel="noopener">Book Bespoke</a>
+      <button class="btn-gold" onclick="document.getElementById('collections').scrollIntoView({behavior:'smooth'})">Explore Collection</button>
+      <a class="btn-white" href="https://www.instagram.com/mirisek_couture/" target="_blank" rel="noopener">Watch Fashion Film</a>
     </div>
   </div>
 </section>
 
-<!-- BRAND STATEMENT -->
-<section class="brand-section">
-  <div class="brand-inner">
-    <div>
-      <p class="section-eyebrow">The Philosophy</p>
-      <h2 class="section-title">Fashion Rooted in<em> Heritage</em></h2>
-      <p class="brand-body">Mirisek Couture transforms African textile traditions into timeless high-fashion statements. Every garment is crafted to embody elegance, identity, and prestige.</p>
-      <p class="brand-body2">Inspired by the vibrancy of Ghanaian Kente, the bold rhythm of Ankara, and the deep artistry of Yoruba Adire.</p>
-    </div>
-    <div class="stats-grid">
-      <div class="stat-card"><span class="stat-num">12+</span><span class="stat-lbl">Signature Pieces</span></div>
-      <div class="stat-card"><span class="stat-num">3</span><span class="stat-lbl">Heritage Collections</span></div>
-      <div class="stat-card wide"><span class="stat-num">100%</span><span class="stat-lbl">African Luxury Identity</span></div>
-    </div>
+<!-- FEATURE BAR -->
+<div class="feature-bar">
+  <div class="feature-bar-inner">
+    <div><div class="feat-title">Luxury</div><div class="feat-sub">Couture Identity</div></div>
+    <div><div class="feat-title">Handcrafted</div><div class="feat-sub">African Textiles</div></div>
+    <div><div class="feat-title">Editorial</div><div class="feat-sub">Runway Inspired</div></div>
+    <div><div class="feat-title">Global</div><div class="feat-sub">African Fashion</div></div>
   </div>
-</section>
+</div>
 
 <!-- COLLECTIONS -->
-<section class="collections-section">
+<section class="collections" id="collections">
   <div class="collections-inner">
-    <div class="section-header">
-      <p class="section-eyebrow">Featured Collections</p>
-      <h2 class="section-header-title">Couture Editions</h2>
+    <div class="collections-header">
+      <div>
+        <p class="col-eyebrow">Signature Collections</p>
+        <h2 class="col-title">Editorial Couture</h2>
+      </div>
+      <p class="col-desc">Inspired by Ghanaian royalty, African craftsmanship, and global fashion sophistication.</p>
     </div>
-    <div class="collections-grid">
-      <div class="collection-card">
-        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1887&auto=format&fit=crop" alt="Ankara Noir collection"/>
-        <div class="card-grad"></div>
-        <div class="card-body">
-          <p class="card-eyebrow">Collection I</p>
-          <h3 class="card-title">Ankara Noir</h3>
-          <p class="card-desc">Bold silhouettes crafted from luxurious Ankara textures.</p>
+    <div class="col-grid">
+      <div class="col-card">
+        <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1974&auto=format&fit=crop" alt="Kente Royale Collection"/>
+        <div class="col-card-grad"></div>
+        <div class="col-card-body">
+          <p class="col-card-sub">Royal Heritage</p>
+          <h3 class="col-card-title">Kente Royale</h3>
+          <button class="col-card-btn">View Collection</button>
         </div>
       </div>
-      <div class="collection-card featured">
-        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1887&auto=format&fit=crop" alt="Kente Royale signature collection"/>
-        <div class="card-grad"></div>
-        <div class="card-body">
-          <p class="card-eyebrow">Signature Collection</p>
-          <h3 class="card-title">Kente Royale</h3>
-          <p class="card-desc">Regal couture inspired by Ghanaian royalty and prestige.</p>
+      <div class="col-card">
+        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1887&auto=format&fit=crop" alt="Ankara Noir Collection"/>
+        <div class="col-card-grad"></div>
+        <div class="col-card-body">
+          <p class="col-card-sub">Modern Elegance</p>
+          <h3 class="col-card-title">Ankara Noir</h3>
+          <button class="col-card-btn">View Collection</button>
         </div>
       </div>
-      <div class="collection-card">
-        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1887&auto=format&fit=crop" alt="Adire Indigo collection"/>
-        <div class="card-grad"></div>
-        <div class="card-body">
-          <p class="card-eyebrow">Collection III</p>
-          <h3 class="card-title">Adire Indigo</h3>
-          <p class="card-desc">Fluid elegance inspired by Yoruba dyeing traditions.</p>
+      <div class="col-card">
+        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1887&auto=format&fit=crop" alt="Adire Indigo Collection"/>
+        <div class="col-card-grad"></div>
+        <div class="col-card-body">
+          <p class="col-card-sub">Timeless Artistry</p>
+          <h3 class="col-card-title">Adire Indigo</h3>
+          <button class="col-card-btn">View Collection</button>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- MATERIALS -->
-<section class="materials-section">
-  <div class="materials-inner">
-    <p class="section-eyebrow">Heritage Materials</p>
-    <h2 class="section-title" style="font-style:italic;">Crafted from Culture</h2>
-    <div class="materials-grid">
-      <div class="material-card">
-        <div class="material-name">Kente</div>
-        <p class="material-desc">Handwoven royal fabric originating from the Ashanti Kingdom of Ghana.</p>
+<!-- STORY -->
+<section class="story" id="story">
+  <div class="story-inner">
+    <div class="story-img-wrap">
+      <img class="story-img" src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1974&auto=format&fit=crop" alt="Mirisek Couture Story"/>
+      <div class="story-badge">
+        <span class="story-badge-num">2026</span>
+        <span class="story-badge-txt">African Luxury Reimagined</span>
       </div>
-      <div class="material-card">
-        <div class="material-name">Adire</div>
-        <p class="material-desc">Traditional indigo resist-dyed textile artistry rooted in Yoruba heritage.</p>
+    </div>
+    <div>
+      <p class="story-eyebrow">The Mirisek Story</p>
+      <h2 class="story-title">Fashion Rooted In Heritage</h2>
+      <p class="story-body">Mirisek Couture celebrates the elegance of African identity through luxury silhouettes, handcrafted detailing, and refined couture storytelling.</p>
+      <p class="story-body2">From Kente royalty to Adire artistry, every Mirisek creation embodies prestige, sophistication, and timeless cultural expression.</p>
+      <a class="btn-gold" href="https://www.instagram.com/mirisek_couture/" target="_blank" rel="noopener" style="display:inline-block;">Discover More</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="lookbook">
+  <div class="testimonials-inner">
+    <p class="col-eyebrow">Client Experience</p>
+    <h2 class="testi-title">Loved By Fashion Enthusiasts</h2>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Exceptional couture quality and luxurious finishing."</p>
+        <p class="testi-author">Verified Client</p>
       </div>
-      <div class="material-card">
-        <div class="material-name">Ankara</div>
-        <p class="material-desc">Vibrant African wax prints reimagined into contemporary couture statements.</p>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Mirisek blends African heritage with global elegance beautifully."</p>
+        <p class="testi-author">Verified Client</p>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Every piece feels regal, artistic, and unforgettable."</p>
+        <p class="testi-author">Verified Client</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
-<section class="cta-section">
+<section class="cta">
   <div class="cta-glow"></div>
   <div class="cta-inner">
-    <p class="section-eyebrow">Bespoke Luxury Experience</p>
-    <h2 class="cta-title">Wear African<em> Excellence</em></h2>
-    <p class="cta-sub">Elevate your presence with couture designed to celebrate power, elegance, and cultural sophistication.</p>
-    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-      <a class="btn-primary" href="https://wa.me/233000000000?text=Hello%20Mirisek%20Couture!%20I%20would%20like%20to%20begin%20my%20couture%20journey." target="_blank" rel="noopener" style="text-decoration:none;">Begin Your Couture Journey</a>
-      <a class="btn-outline" href="https://www.instagram.com/mirisek_couture/" target="_blank" rel="noopener">@mirisek_couture</a>
+    <p class="cta-eyebrow">Bespoke Luxury Experience</p>
+    <h2 class="cta-title">Wear African Excellence</h2>
+    <p class="cta-sub">Experience couture crafted for prestige, confidence, and timeless sophistication.</p>
+    <div class="cta-btns">
+      <a class="btn-gold" href="https://wa.me/233000000000?text=Hello%20Mirisek%20Couture!%20I%20would%20like%20to%20begin%20my%20couture%20journey." target="_blank" rel="noopener" style="display:inline-block;text-decoration:none;">Begin Your Couture Journey</a>
+      <button class="btn-white" onclick="shareWhatsApp()">Share This Page</button>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2026 Mirisek Couture — African Luxury Reimagined. &nbsp;|&nbsp; Accra, Ghana &nbsp;|&nbsp; <a href="https://www.instagram.com/mirisek_couture/" target="_blank">@mirisek_couture</a></p>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3>MIRISEK</h3>
+      <p>African Luxury Reimagined · Accra, Ghana</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/mirisek_couture/" target="_blank" rel="noopener">Instagram</a>
+      <a href="#collections">Lookbook</a>
+      <a href="https://wa.me/233000000000" target="_blank" rel="noopener">Contact</a>
+    </div>
+  </div>
 </footer>
 
 <script>
-  const PAGE_URL = 'https://eosekre.github.io/mirisek-couture';
-  const IG_URL = 'https://www.instagram.com/mirisek_couture/';
-
-  function showToast(msg) {
-    const t = document.getElementById('toast');
-    t.textContent = msg;
-    t.classList.add('show');
-    setTimeout(() => t.classList.remove('show'), 2800);
-  }
-  function shareWhatsApp() {
-    const text = encodeURIComponent('✨ Mirisek Couture — African luxury fashion from Accra, Ghana.\nKente · Ankara · Adire · Bespoke tailoring.\n\n' + PAGE_URL);
-    window.open('https://wa.me/?text=' + text, '_blank');
-  }
-  function shareFacebook() {
-    window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(PAGE_URL), '_blank');
-  }
-  async function copyLink() {
-    try {
-      await navigator.clipboard.writeText(PAGE_URL);
-    } catch {
-      const el = document.createElement('textarea');
-      el.value = PAGE_URL;
-      document.body.appendChild(el);
-      el.select();
-      document.execCommand('copy');
-      document.body.removeChild(el);
-    }
-    showToast('Link copied!');
-  }
-  if (navigator.share) {
-    const btn = document.createElement('button');
-    btn.className = 'share-btn primary';
-    btn.innerHTML = '<svg viewBox="0 0 24 24" style="width:11px;height:11px;fill:currentColor"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg> Share';
-    btn.onclick = () => navigator.share({ title: 'Mirisek Couture', text: 'African luxury fashion from Accra, Ghana.', url: PAGE_URL });
-    document.querySelector('.share-actions').prepend(btn);
-  }
+const PAGE_URL='https://eosekre.github.io/mirisek-couture';
+const IG_URL='https://www.instagram.com/mirisek_couture/';
+function showToast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2800);}
+function shareWhatsApp(){window.open('https://wa.me/?text='+encodeURIComponent('✨ Mirisek Couture — African luxury fashion from Accra, Ghana.\nKente · Ankara · Adire · Bespoke tailoring.\n\n'+PAGE_URL),'_blank');}
+function shareFacebook(){window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(PAGE_URL),'_blank');}
+async function copyLink(){try{await navigator.clipboard.writeText(PAGE_URL);}catch{const e=document.createElement('textarea');e.value=PAGE_URL;document.body.appendChild(e);e.select();document.execCommand('copy');document.body.removeChild(e);}showToast('Link copied!');}
+if(navigator.share){const b=document.createElement('button');b.className='share-btn primary';b.innerHTML='<svg viewBox="0 0 24 24" style="width:10px;height:10px;fill:currentColor"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg> Share';b.onclick=()=>navigator.share({title:'Mirisek Couture',text:'African luxury fashion from Accra, Ghana.',url:PAGE_URL});document.querySelector('.share-bar').prepend(b);}
+// Navbar scroll effect
+window.addEventListener('scroll',()=>{document.querySelector('.navbar').style.background=window.scrollY>60?'rgba(0,0,0,0.85)':'rgba(0,0,0,0.4)';});
 </script>
 </body>
 </html>
