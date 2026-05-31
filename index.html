@@ -3,696 +3,238 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta property="og:title" content="Mirisek Couture — African Luxury Fashion House & Sewing Academy" />
-<meta property="og:description" content="African luxury fashion, couture training, sewing programmes and bespoke design. Located at Oyarifa School Junction, Behind Shell Filling Station, Accra, Ghana." />
-<meta name="twitter:card" content="summary_large_image" />
 <title>Mirisek Couture — Luxury Fashion House & Sewing Academy</title>
-
+<meta name="description" content="Mirisek Couture — African luxury fashion house and sewing academy in Accra, Ghana." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-:root{
-  --gold:#C8973A;
-  --gold-light:#E5B96A;
-  --sand:#F5EDD8;
-  --midnight:#0b0b0b;
-  --dark:#111111;
-  --charcoal:#1E1B17;
-  --off-white:#FAF7F2;
-  --muted:#9A8F82;
-  --border:rgba(200,151,58,.25);
-  --border-hover:rgba(200,151,58,.55);
-  --danger:#E24B4A;
-}
-html{scroll-behavior:smooth;}
-body{
-  font-family:'DM Sans',sans-serif;
-  background:var(--midnight);
-  color:var(--off-white);
-  overflow-x:hidden;
-  -webkit-font-smoothing:antialiased;
-}
-a{text-decoration:none;color:inherit;}
-img{max-width:100%;display:block;}
-section{position:relative;}
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--gold:#C8973A;--gold2:#E5B96A;--cream:#FAF7F2;--muted:#A79C8B;--black:#080808;--dark:#111;--line:rgba(200,151,58,.28);--line2:rgba(200,151,58,.55);--red:#E24B4A}
+html{scroll-behavior:smooth}body{font-family:'DM Sans',sans-serif;background:var(--black);color:var(--cream);overflow-x:hidden}a{text-decoration:none;color:inherit}img{max-width:100%;display:block}.container{max-width:1180px;margin:auto}.section{padding:100px 32px}.tag{font-size:11px;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}.title{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,6vw,76px);font-style:italic;font-weight:300;line-height:1}.title span{color:var(--gold2)}.sub{color:var(--muted);font-size:15px;line-height:1.8;max-width:720px}.center{text-align:center}.center .sub{margin:18px auto 0}
 
-/* NAVIGATION */
-.navbar{
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  z-index:999;
-  padding:20px 48px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  background:rgba(11,11,11,.78);
-  backdrop-filter:blur(18px);
-  border-bottom:.5px solid rgba(200,151,58,.18);
-}
-.nav-brand{
-  font-family:'Cormorant Garamond',serif;
-  color:var(--gold-light);
-  font-size:26px;
-  font-style:italic;
-  letter-spacing:.05em;
-}
-.nav-links{display:flex;gap:30px;list-style:none;align-items:center;}
-.nav-links a{
-  font-size:11px;
-  text-transform:uppercase;
-  letter-spacing:.22em;
-  color:var(--off-white);
-  opacity:.72;
-  transition:.25s;
-}
-.nav-links a:hover{opacity:1;color:var(--gold-light);}
-.nav-cta{
-  border:.5px solid var(--gold);
-  color:var(--gold)!important;
-  padding:10px 18px;
-  border-radius:999px;
-}
-.nav-cta:hover{background:var(--gold);color:var(--midnight)!important;}
-@media(max-width:900px){
-  .navbar{padding:16px 22px;}
-  .nav-links{display:none;}
-}
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:16px 44px;display:flex;align-items:center;justify-content:space-between;background:rgba(8,8,8,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(200,151,58,.18)}
+.brand{font-family:'Cormorant Garamond',serif;font-size:27px;font-style:italic;color:var(--gold2);letter-spacing:.04em}.links{display:flex;align-items:center;gap:24px;list-style:none}.links a{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#eee;opacity:.78;transition:.25s}.links a:hover{opacity:1;color:var(--gold2)}.navapply{padding:11px 18px;border:1px solid var(--gold);border-radius:999px;color:var(--gold)!important;opacity:1!important}.navapply:hover{background:var(--gold);color:#000!important}.menuBtn{display:none;background:none;border:1px solid var(--line);color:var(--gold);padding:10px 14px;border-radius:999px}
+@media(max-width:900px){.nav{padding:14px 20px}.links{display:none;position:absolute;left:20px;right:20px;top:66px;background:rgba(8,8,8,.97);border:1px solid var(--line);border-radius:18px;padding:22px;flex-direction:column}.links.show{display:flex}.menuBtn{display:block}}
 
 /* HERO */
-.hero{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:140px 24px 80px;
-  background:
-    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.8)),
-    url('https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1800&q=80') center/cover;
-}
-.hero-inner{max-width:980px;margin:auto;}
-.eyebrow{
-  font-size:11px;
-  letter-spacing:.45em;
-  text-transform:uppercase;
-  color:var(--gold-light);
-  margin-bottom:20px;
-}
-.hero h1{
-  font-family:'Cormorant Garamond',serif;
-  font-size:clamp(52px,9vw,118px);
-  font-style:italic;
-  font-weight:300;
-  line-height:.92;
-  margin-bottom:26px;
-}
-.hero h1 span{color:var(--gold-light);}
-.hero p{
-  max-width:680px;
-  margin:0 auto 36px;
-  color:#d7cdbc;
-  font-size:16px;
-  line-height:1.8;
-}
-.btn-group{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;}
-.btn-primary,.btn-outline{
-  padding:15px 34px;
-  border-radius:999px;
-  font-size:11px;
-  letter-spacing:.22em;
-  text-transform:uppercase;
-  transition:.25s;
-}
-.btn-primary{background:var(--gold);color:var(--midnight);font-weight:600;}
-.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);}
-.btn-outline{border:.5px solid var(--border-hover);color:var(--gold-light);}
-.btn-outline:hover{background:rgba(200,151,58,.1);}
+.hero{min-height:100vh;display:flex;align-items:center;padding:140px 32px 80px;background:linear-gradient(90deg,rgba(0,0,0,.86) 0%,rgba(0,0,0,.55) 46%,rgba(0,0,0,.12) 100%),url('hero.jpg') center/cover no-repeat}.heroBox{max-width:760px}.hero h1{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(54px,9vw,118px);line-height:.9;margin:16px 0 24px}.hero h1 span{color:var(--gold2)}.hero p{color:#dfd5c7;font-size:17px;line-height:1.85;max-width:680px}.btns{display:flex;gap:15px;flex-wrap:wrap;margin-top:34px}.btn,.btn2{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:15px 30px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;transition:.25s}.btn{background:var(--gold);color:#000;font-weight:800}.btn:hover{background:var(--gold2);transform:translateY(-2px)}.btn2{border:1px solid var(--line2);color:var(--gold2)}.btn2:hover{background:rgba(200,151,58,.1)}
+.floatApply{position:fixed;right:22px;bottom:22px;z-index:999;background:var(--gold);color:#000;padding:15px 22px;border-radius:999px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;box-shadow:0 12px 35px rgba(0,0,0,.45)}
+@media(max-width:760px){.hero{background:linear-gradient(rgba(0,0,0,.62),rgba(0,0,0,.88)),url('hero.jpg') center/cover no-repeat}.floatApply{left:18px;right:18px;text-align:center;justify-content:center}}
 
-/* COMMON SECTIONS */
-.section-pad{padding:100px 48px;}
-.container{max-width:1180px;margin:0 auto;}
-.section-head{text-align:center;max-width:760px;margin:0 auto 56px;}
-.section-tag{
-  font-size:10px;
-  letter-spacing:.45em;
-  text-transform:uppercase;
-  color:var(--gold);
-  margin-bottom:18px;
-}
-.section-title{
-  font-family:'Cormorant Garamond',serif;
-  font-size:clamp(38px,6vw,72px);
-  font-style:italic;
-  font-weight:300;
-  line-height:1;
-  margin-bottom:18px;
-}
-.section-title span{color:var(--gold-light);}
-.section-sub{color:var(--muted);line-height:1.8;font-size:15px;}
+/* ADMISSION BANNER */
+.academyBanner{padding:80px 28px;background:linear-gradient(135deg,rgba(200,151,58,.14),rgba(0,0,0,.95));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.academyCard{max-width:1040px;margin:auto;display:grid;grid-template-columns:1.2fr .8fr;gap:34px;align-items:center;border:1px solid var(--line);border-radius:28px;padding:42px;background:rgba(255,255,255,.03)}.academyCard h2{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(34px,5vw,62px);line-height:1.05}.academyCard p{margin-top:16px;color:#d4c8b7;line-height:1.8}.academyMini{display:grid;gap:12px}.mini{border:1px solid var(--line);border-radius:18px;padding:18px;background:rgba(0,0,0,.25)}.mini strong{color:var(--gold2);display:block;margin-bottom:5px}.mini span{color:var(--muted);font-size:13px;line-height:1.6}@media(max-width:850px){.academyCard{grid-template-columns:1fr;padding:28px}}
 
-/* ABOUT */
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
-.about-card{
-  border:.5px solid var(--border);
-  background:rgba(255,255,255,.025);
-  padding:40px;
-  border-radius:24px;
-}
-.about-card h3{
-  font-family:'Cormorant Garamond',serif;
-  color:var(--gold-light);
-  font-size:34px;
-  font-style:italic;
-  margin-bottom:18px;
-}
-.about-card p{color:#cfc4b5;line-height:1.85;margin-bottom:18px;}
-.about-image{
-  min-height:500px;
-  border-radius:24px;
-  border:.5px solid var(--border);
-  background:
-    linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.45)),
-    url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1200&q=80') center/cover;
-}
-@media(max-width:850px){.about-grid{grid-template-columns:1fr;}.section-pad{padding:80px 22px;}}
-
-/* LOOKS */
-.looks-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-.look-card{
-  min-height:420px;
-  border-radius:22px;
-  border:.5px solid var(--border);
-  overflow:hidden;
-  padding:28px;
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-end;
-  background-size:cover;
-  background-position:center;
-  position:relative;
-}
-.look-card::before{content:"";position:absolute;inset:0;background:linear-gradient(transparent,rgba(0,0,0,.82));}
-.look-card > *{position:relative;z-index:1;}
-.look-card h3{font-family:'Cormorant Garamond',serif;font-size:30px;font-style:italic;color:var(--gold-light);}
-.look-card p{color:#cabfaf;line-height:1.6;font-size:14px;}
-.look1{background-image:url('https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80');}
-.look2{background-image:url('https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?auto=format&fit=crop&w=900&q=80');}
-.look3{background-image:url('https://images.unsplash.com/photo-1520975954732-35dd22299614?auto=format&fit=crop&w=900&q=80');}
-@media(max-width:850px){.looks-grid{grid-template-columns:1fr;}}
-
-/* PROGRAMMES */
-.programmes{background:linear-gradient(180deg,rgba(200,151,58,.05),transparent);}
-.programme-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
-.programme-card{
-  border:.5px solid var(--border);
-  background:rgba(255,255,255,.025);
-  border-radius:20px;
-  padding:26px;
-  transition:.25s;
-}
-.programme-card:hover{border-color:var(--border-hover);transform:translateY(-4px);}
-.programme-card .tag{
-  font-size:9px;
-  letter-spacing:.22em;
-  text-transform:uppercase;
-  color:var(--gold);
-  margin-bottom:16px;
-}
-.programme-card h3{
-  font-family:'Cormorant Garamond',serif;
-  font-size:25px;
-  font-style:italic;
-  margin-bottom:10px;
-  color:var(--gold-light);
-}
-.programme-card p{font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:12px;}
-.programme-card strong{color:var(--off-white);}
-@media(max-width:1000px){.programme-grid{grid-template-columns:repeat(2,1fr);}}
-@media(max-width:600px){.programme-grid{grid-template-columns:1fr;}}
-
-/* GALLERY */
-.gallery-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:18px;}
-.gallery-img{
-  min-height:260px;
-  border-radius:20px;
-  border:.5px solid var(--border);
-  background-size:cover;
-  background-position:center;
-}
-.gallery-img.large{grid-row:span 2;min-height:540px;}
-.g1{background-image:url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80');}
-.g2{background-image:url('https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=80');}
-.g3{background-image:url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80');}
-.g4{background-image:url('https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80');}
-.g5{background-image:url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=800&q=80');}
-@media(max-width:850px){.gallery-grid{grid-template-columns:1fr;}.gallery-img.large{min-height:360px;}}
+/* CARDS */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:center}.glass{border:1px solid var(--line);background:rgba(255,255,255,.03);border-radius:26px;padding:38px}.glass h3{font-family:'Cormorant Garamond',serif;font-size:36px;font-style:italic;font-weight:300;color:var(--gold2);margin-bottom:15px}.glass p{color:#d0c4b5;line-height:1.85;margin-bottom:16px}.photo{min-height:480px;border-radius:26px;border:1px solid var(--line);background:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.45)),url('hero.jpg') center/cover}.lookgrid,.progOverview{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:50px}.look,.program{border:1px solid var(--line);border-radius:24px;background:rgba(255,255,255,.03);overflow:hidden;transition:.25s}.look:hover,.program:hover{border-color:var(--line2);transform:translateY(-4px)}.lookImg{height:320px;background-size:cover;background-position:center}.l1{background-image:url('https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80')}.l2{background-image:url('https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?auto=format&fit=crop&w=900&q=80')}.l3{background-image:url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80')}.lookText,.program{padding:24px}.look h3,.program h3{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:29px;font-weight:300;color:var(--gold2);margin-bottom:8px}.look p,.program p{font-size:14px;color:var(--muted);line-height:1.7}.progOverview{grid-template-columns:repeat(4,1fr)}.program .price{color:var(--gold2);font-size:19px;margin-top:16px}.program .small{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;gap:18px;margin-top:50px}.gal{min-height:260px;border:1px solid var(--line);border-radius:22px;background-size:cover;background-position:center}.gal.big{grid-row:span 2;min-height:540px}.g1{background-image:url('hero.jpg')}.g2{background-image:url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80')}.g3{background-image:url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=800&q=80')}.g4{background-image:url('https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80')}.g5{background-image:url('https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80')}
+@media(max-width:950px){.grid2,.lookgrid,.progOverview,.gallery{grid-template-columns:1fr}.gal.big{min-height:360px}.photo{min-height:360px}}
 
 /* APPLICATION */
-.application-section{background:#0a0a0a;border-top:.5px solid var(--border);}
-.form-outer{max-width:900px;margin:0 auto;}
-.form-card{background:rgba(255,255,255,.025);border:.5px solid var(--border);border-radius:24px;overflow:hidden;}
-.steps-wrap{max-width:860px;margin:0 auto 30px;}
-.steps{display:flex;align-items:center;gap:0;}
-.step-wrapper{display:flex;flex-direction:column;align-items:center;flex-shrink:0;}
-.step{display:flex;align-items:center;}
-.step-dot{width:36px;height:36px;border-radius:50%;border:.5px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--muted);cursor:pointer;}
-.step.active .step-dot,.step.done .step-dot{background:var(--gold);border-color:var(--gold);color:var(--midnight);font-weight:700;}
-.step-label{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-top:8px;white-space:nowrap;}
-.step-line{flex:1;height:.5px;background:var(--border);margin:0 8px 24px;}
-.step-line.done{background:var(--gold);}
-.form-panel{display:none;padding:48px;}
-.form-panel.active{display:block;}
-.panel-title{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,42px);font-style:italic;font-weight:300;margin-bottom:8px;}
-.panel-title span{color:var(--gold-light);}
-.panel-sub{font-size:13px;color:var(--muted);margin-bottom:38px;line-height:1.7;}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px 32px;}
-.form-group{display:flex;flex-direction:column;gap:8px;}
-.form-group.full{grid-column:1/-1;}
-label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500;}
-input,select,textarea{
-  background:rgba(255,255,255,.045);
-  border:.5px solid var(--border);
-  border-radius:10px;
-  padding:14px 16px;
-  color:var(--off-white);
-  font-family:'DM Sans',sans-serif;
-  outline:none;
-  width:100%;
-}
-input::placeholder,textarea::placeholder{color:var(--muted);}
-input:focus,select:focus,textarea:focus{border-color:var(--gold);background:rgba(200,151,58,.06);}
-select option{background:#1a1713;color:var(--off-white);}
-textarea{resize:vertical;min-height:110px;line-height:1.6;}
-.choice-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-.choice-card{position:relative;}
-.choice-card input[type=radio],.choice-card input[type=checkbox]{position:absolute;opacity:0;pointer-events:none;}
-.choice-label{display:block;padding:14px 16px;border:.5px solid var(--border);border-radius:12px;cursor:pointer;transition:.2s;font-size:13px;line-height:1.5;}
-.choice-title{font-weight:500;color:var(--off-white);display:block;margin-bottom:3px;}
-.choice-sub{font-size:11px;color:var(--muted);}
-.choice-card input:checked + .choice-label{border-color:var(--gold);background:rgba(200,151,58,.08);}
-.form-divider{height:.5px;background:var(--border);margin:32px 0;}
-.prog-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-.prog-card{position:relative;}
-.prog-card input[type=radio]{position:absolute;opacity:0;pointer-events:none;}
-.prog-body{border:.5px solid var(--border);border-radius:14px;padding:20px;cursor:pointer;transition:.2s;height:100%;}
-.prog-card input:checked + .prog-body{border-color:var(--gold);background:rgba(200,151,58,.06);}
-.prog-tag{font-size:9px;letter-spacing:.2em;text-transform:uppercase;background:rgba(200,151,58,.15);color:var(--gold);padding:3px 10px;border-radius:999px;display:inline-block;margin-bottom:12px;}
-.prog-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;margin-bottom:6px;color:var(--gold-light);}
-.prog-desc{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:14px;}
-.prog-meta{display:flex;gap:12px;flex-wrap:wrap;}
-.prog-meta-item{font-size:11px;color:var(--muted);}
-.prog-price{font-size:18px;font-weight:500;color:var(--gold-light);margin-top:12px;}
-.upload-zone{border:.5px dashed var(--border);border-radius:12px;padding:30px;text-align:center;cursor:pointer;transition:.2s;}
-.upload-zone:hover{border-color:var(--gold);background:rgba(200,151,58,.04);}
-.upload-zone input{display:none;}
-.btn-row{display:flex;justify-content:space-between;align-items:center;margin-top:40px;gap:14px;}
-.btn-back,.btn-next{padding:14px 30px;border-radius:999px;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;transition:.2s;}
-.btn-back{background:transparent;border:.5px solid var(--border);color:var(--muted);}
-.btn-next{background:var(--gold);color:var(--midnight);border:none;font-weight:700;}
-.btn-next:hover{background:var(--gold-light);}
-.review-section{margin-bottom:32px;}
-.review-section h4{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);border-bottom:.5px solid var(--border);padding-bottom:10px;margin-bottom:16px;}
-.review-row{display:flex;justify-content:space-between;padding:9px 0;font-size:13px;border-bottom:.5px solid rgba(200,151,58,.08);gap:18px;}
-.review-key{color:var(--muted);}
-.review-val{text-align:right;max-width:60%;}
-.success-wrap{text-align:center;padding:80px 30px;}
-.success-icon{font-size:52px;color:var(--gold);margin-bottom:24px;}
-.success-title{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,5vw,58px);font-style:italic;margin-bottom:12px;}
-.success-sub{font-size:14px;color:var(--muted);max-width:520px;margin:0 auto 30px;line-height:1.7;}
-.success-ref{background:rgba(200,151,58,.08);border:.5px solid var(--border);border-radius:12px;padding:20px 32px;display:inline-block;font-size:13px;color:var(--muted);margin-bottom:34px;}
-.success-ref strong{display:block;font-size:22px;color:var(--gold-light);font-family:'Cormorant Garamond',serif;font-style:italic;margin-top:5px;}
-.whatsapp-btn{display:inline-block;background:#25D366;color:#05170b;padding:14px 32px;border-radius:999px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;}
-.invalid{border-color:var(--danger)!important;}
-@media(max-width:700px){
-  .form-panel{padding:32px 22px;}
-  .form-grid,.choice-grid,.prog-grid{grid-template-columns:1fr;}
-  .steps-wrap{overflow-x:auto;padding-bottom:10px;}
-  .steps{min-width:640px;}
-  .btn-row{flex-direction:column;align-items:stretch;}
-}
+.applySec{background:#090909;border-top:1px solid var(--line)}.steps{max-width:880px;margin:45px auto 28px;display:flex;align-items:center}.stepWrap{display:flex;flex-direction:column;align-items:center}.step{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);color:var(--muted);font-size:12px}.step.active,.step.done{background:var(--gold);border-color:var(--gold);color:#000;font-weight:800}.stepLabel{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:8px}.line{flex:1;height:1px;background:var(--line);margin:0 8px 25px}.line.done{background:var(--gold)}.formCard{max-width:900px;margin:auto;border:1px solid var(--line);border-radius:28px;background:rgba(255,255,255,.03);overflow:hidden}.panel{display:none;padding:46px}.panel.active{display:block}.panel h3{font-family:'Cormorant Garamond',serif;font-size:42px;font-style:italic;font-weight:300;margin-bottom:8px}.panel h3 span{color:var(--gold2)}.panelSub{font-size:14px;color:var(--muted);line-height:1.75;margin-bottom:34px}.formGrid{display:grid;grid-template-columns:1fr 1fr;gap:22px 28px}.group{display:flex;flex-direction:column;gap:8px}.full{grid-column:1/-1}label{font-size:11px;letter-spacing:.19em;text-transform:uppercase;color:var(--gold);font-weight:700}input,select,textarea{width:100%;background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:12px;color:var(--cream);padding:14px 15px;font-family:'DM Sans',sans-serif;outline:none}select option{background:#17130e}textarea{min-height:110px;resize:vertical;line-height:1.6}input:focus,select:focus,textarea:focus{border-color:var(--gold);background:rgba(200,151,58,.07)}.invalid{border-color:var(--red)!important}.choiceGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.choice{position:relative}.choice input{position:absolute;opacity:0;pointer-events:none}.choice label{display:block;border:1px solid var(--line);border-radius:14px;padding:15px 16px;cursor:pointer;text-transform:none;letter-spacing:0;color:var(--cream);font-size:14px;line-height:1.5}.choice input:checked+label{border-color:var(--gold);background:rgba(200,151,58,.09)}.choice small{display:block;color:var(--muted);margin-top:3px}.divide{height:1px;background:var(--line);margin:30px 0}.programChoice{display:grid;grid-template-columns:1fr 1fr;gap:16px}.pchoice{position:relative}.pchoice input{position:absolute;opacity:0}.pbody{height:100%;border:1px solid var(--line);border-radius:18px;padding:20px;cursor:pointer;transition:.2s}.pchoice input:checked+.pbody{border-color:var(--gold);background:rgba(200,151,58,.08)}.ptag{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}.pname{font-family:'Cormorant Garamond',serif;font-size:25px;font-style:italic;color:var(--gold2);margin-bottom:8px}.pdesc{font-size:13px;color:var(--muted);line-height:1.65}.pprice{color:var(--gold2);font-size:19px;margin-top:12px}.upload{border:1px dashed var(--line2);border-radius:14px;padding:28px;text-align:center;cursor:pointer;color:var(--muted)}.upload input{display:none}.btnrow{display:flex;justify-content:space-between;gap:14px;margin-top:38px}.back,.next{border-radius:999px;padding:14px 30px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;font-family:'DM Sans',sans-serif}.back{background:none;color:var(--muted);border:1px solid var(--line)}.next{background:var(--gold);color:#000;border:none;font-weight:800}.review h4{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--line);padding-bottom:10px;margin:22px 0 10px}.row{display:flex;justify-content:space-between;gap:20px;padding:10px 0;border-bottom:1px solid rgba(200,151,58,.1);font-size:14px}.key{color:var(--muted)}.val{text-align:right;max-width:60%}.success{text-align:center;padding:80px 24px}.successIcon{font-size:58px;color:var(--gold);margin-bottom:16px}.success h3{font-size:58px}.ref{display:inline-block;margin:24px 0 30px;padding:18px 30px;border:1px solid var(--line);border-radius:15px;color:var(--muted);background:rgba(200,151,58,.07)}.ref strong{display:block;color:var(--gold2);font-family:'Cormorant Garamond',serif;font-size:26px;font-style:italic;margin-top:5px}.wa{display:inline-flex;background:#25D366;color:#07180c;border-radius:999px;padding:15px 30px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:900}
+@media(max-width:760px){.section{padding:80px 20px}.panel{padding:30px 20px}.formGrid,.choiceGrid,.programChoice{grid-template-columns:1fr}.steps{overflow-x:auto;min-width:620px}.btnrow{flex-direction:column}.back,.next{width:100%}.nav{padding:14px 18px}.brand{font-size:24px}}
 
-/* CONTACT */
-.contact-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;}
-.contact-card{border:.5px solid var(--border);background:rgba(255,255,255,.025);border-radius:22px;padding:34px;}
-.contact-card h3{font-family:'Cormorant Garamond',serif;color:var(--gold-light);font-size:34px;font-style:italic;margin-bottom:16px;}
-.contact-card p{color:var(--muted);line-height:1.8;margin-bottom:12px;}
-@media(max-width:850px){.contact-grid{grid-template-columns:1fr;}}
-
-/* FOOTER */
-.footer{border-top:.5px solid var(--border);padding:36px 24px;text-align:center;color:var(--muted);font-size:12px;line-height:1.8;}
-.footer strong{color:var(--gold-light);font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;}
+/* CONTACT / FOOTER */
+.contact{display:grid;grid-template-columns:1.2fr .8fr;gap:24px}.footer{padding:38px 22px;text-align:center;border-top:1px solid var(--line);color:var(--muted);font-size:13px;line-height:1.9}.footer strong{font-family:'Cormorant Garamond',serif;font-size:25px;font-style:italic;color:var(--gold2)}@media(max-width:850px){.contact{grid-template-columns:1fr}}
 </style>
 </head>
 
 <body>
-<nav class="navbar">
-  <a href="#home" class="nav-brand">Mirisek Couture</a>
-  <ul class="nav-links">
+<a href="#apply" class="floatApply">✂ Apply Now</a>
+
+<nav class="nav">
+  <a href="#home" class="brand">Mirisek Couture</a>
+  <button class="menuBtn" onclick="toggleMenu()">Menu</button>
+  <ul class="links" id="navLinks">
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#collections">Collections</a></li>
-    <li><a href="#programmes">Programmes</a></li>
+    <li><a href="#programmes">Academy</a></li>
     <li><a href="#gallery">Gallery</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#apply" class="nav-cta">Apply Now</a></li>
+    <li><a class="navapply" href="#apply">✦ Apply for Sewing Programme</a></li>
   </ul>
 </nav>
 
 <header id="home" class="hero">
-  <div class="hero-inner">
-    <p class="eyebrow">African Luxury Fashion House</p>
+  <div class="heroBox">
+    <p class="tag">Mirisek Couture · African Luxury Fashion House</p>
     <h1>Where Heritage<br><span>Becomes Couture</span></h1>
-    <p>Mirisek Couture blends African textile heritage with modern luxury fashion. We design bespoke garments, train emerging fashion talent, and celebrate craftsmanship through every stitch.</p>
-    <div class="btn-group">
-      <a href="#apply" class="btn-primary">Apply for Sewing Programme</a>
-      <a href="#collections" class="btn-outline">View Collections</a>
+    <p>Experience bespoke bridal and luxury fashion crafted with elegance, heritage and precision. Join our sewing academy and learn the art of couture from a professional fashion house.</p>
+    <div class="btns">
+      <a class="btn" href="#apply">Apply for Sewing Programme</a>
+      <a class="btn2" href="#programmes">View Programmes</a>
     </div>
   </div>
 </header>
 
-<section id="about" class="section-pad">
-  <div class="container about-grid">
-    <div class="about-card">
-      <p class="section-tag">Our Philosophy</p>
+<section class="academyBanner">
+  <div class="academyCard">
+    <div>
+      <p class="tag">Admissions Open ✦</p>
+      <h2>Learn Sewing at Mirisek Couture</h2>
+      <p>Start your fashion journey with hands-on training in sewing, pattern drafting, garment construction, bridal couture, African fashion design and fashion entrepreneurship.</p>
+      <div class="btns"><a class="btn" href="#apply">Start Application</a><a class="btn2" href="#programmes">See Courses</a></div>
+    </div>
+    <div class="academyMini">
+      <div class="mini"><strong>Hands-On Training</strong><span>Practical sewing lessons in a luxury atelier environment.</span></div>
+      <div class="mini"><strong>Beginner to Advanced</strong><span>Courses available for all skill levels.</span></div>
+      <div class="mini"><strong>WhatsApp Confirmation</strong><span>Applicants receive follow-up from admissions.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="container grid2">
+    <div class="glass">
+      <p class="tag">Our Story</p>
       <h3>Luxury rooted in African identity.</h3>
-      <p>Mirisek Couture honours the beauty of African textiles including Kente, Ankara, Adire and Bogolan mud cloth. Each garment is crafted to express elegance, culture and individuality.</p>
-      <p>Through Mirisek Couture Academy, we also train new designers in sewing, garment construction, pattern drafting, finishing and fashion entrepreneurship.</p>
-      <a href="#programmes" class="btn-outline">Explore Training</a>
+      <p>Mirisek Couture is a fashion house dedicated to refined African luxury, bespoke bridal wear and beautifully finished couture garments.</p>
+      <p>Through Mirisek Couture Academy, we train aspiring designers to master sewing, garment finishing, pattern drafting and the discipline of professional fashion production.</p>
+      <a class="btn2" href="#apply">Join the Academy</a>
     </div>
-    <div class="about-image"></div>
+    <div class="photo"></div>
   </div>
 </section>
 
-<section id="collections" class="section-pad">
+<section id="collections" class="section">
   <div class="container">
-    <div class="section-head">
-      <p class="section-tag">Signature Looks</p>
-      <h2 class="section-title">Couture <span>Collections</span></h2>
-      <p class="section-sub">Designed for the woman who values grace, heritage and modern sophistication.</p>
+    <div class="center">
+      <p class="tag">Signature Looks</p>
+      <h2 class="title">Couture <span>Collections</span></h2>
+      <p class="sub">Elegant pieces inspired by African textile heritage, bridal artistry and modern luxury.</p>
     </div>
-    <div class="looks-grid">
-      <div class="look-card look1">
-        <h3>Ankara Noir</h3>
-        <p>Bold wax print tailoring with a luxury eveningwear attitude.</p>
-      </div>
-      <div class="look-card look2">
-        <h3>Kente Royale</h3>
-        <p>Regal silhouettes inspired by the richness of Ashanti Kente heritage.</p>
-      </div>
-      <div class="look-card look3">
-        <h3>Adire Indigo</h3>
-        <p>Soft flowing pieces inspired by Yoruba Adire textile artistry.</p>
-      </div>
+    <div class="lookgrid">
+      <div class="look"><div class="lookImg l1"></div><div class="lookText"><h3>Ankara Noir</h3><p>Bold tailoring with refined wax-print identity.</p></div></div>
+      <div class="look"><div class="lookImg l2"></div><div class="lookText"><h3>Kente Royale</h3><p>Regal silhouettes inspired by Ashanti heritage.</p></div></div>
+      <div class="look"><div class="lookImg l3"></div><div class="lookText"><h3>Bridal Atelier</h3><p>Premium bridal finishing, fittings and couture detailing.</p></div></div>
     </div>
   </div>
 </section>
 
-<section id="programmes" class="section-pad programmes">
+<section id="programmes" class="section" style="background:linear-gradient(180deg,rgba(200,151,58,.06),transparent)">
   <div class="container">
-    <div class="section-head">
-      <p class="section-tag">Mirisek Couture Academy</p>
-      <h2 class="section-title">Learn <span>Sewing & Fashion Design</span></h2>
-      <p class="section-sub">Our sewing programmes are designed for beginners, aspiring designers and fashion entrepreneurs who want hands-on practical training.</p>
+    <div class="center">
+      <p class="tag">Mirisek Couture Academy</p>
+      <h2 class="title">Sewing <span>Training Programmes</span></h2>
+      <p class="sub">Choose a course that matches your current skill level and your dream in fashion.</p>
     </div>
-    <div class="programme-grid">
-      <div class="programme-card">
-        <p class="tag">Beginner</p>
-        <h3>Foundation Sewing</h3>
-        <p>Learn hand stitching, machine threading, basic cutting and garment finishing.</p>
-        <p><strong>Duration:</strong> 4 Weeks</p>
-      </div>
-      <div class="programme-card">
-        <p class="tag">Intermediate</p>
-        <h3>Kente & Ankara Couture</h3>
-        <p>Construct dresses, skirts, blouses and structured African fashion pieces.</p>
-        <p><strong>Duration:</strong> 8 Weeks</p>
-      </div>
-      <div class="programme-card">
-        <p class="tag">Advanced</p>
-        <h3>Luxury Bridal</h3>
-        <p>Master draping, boning, fittings, embellishment and eveningwear finishing.</p>
-        <p><strong>Duration:</strong> 12 Weeks</p>
-      </div>
-      <div class="programme-card">
-        <p class="tag">Bespoke</p>
-        <h3>Private Mentorship</h3>
-        <p>One-on-one training customised to your creative and business goals.</p>
-        <p><strong>Duration:</strong> Custom</p>
-      </div>
+    <div class="progOverview">
+      <div class="program"><p class="small">Beginner</p><h3>Foundation Sewing</h3><p>Machine basics, hand stitching, cutting, seams and finishing.</p><p class="price">GHS 1,200</p></div>
+      <div class="program"><p class="small">Intermediate</p><h3>Kente & Ankara Couture</h3><p>Learn structured African garment construction and finishing.</p><p class="price">GHS 2,400</p></div>
+      <div class="program"><p class="small">Advanced</p><h3>Luxury Bridal</h3><p>Draping, boning, embellishment, fittings and eveningwear.</p><p class="price">GHS 4,800</p></div>
+      <div class="program"><p class="small">Bespoke</p><h3>Private Mentorship</h3><p>One-on-one customised lessons with a couture focus.</p><p class="price">From GHS 6,000</p></div>
     </div>
   </div>
 </section>
 
-<section id="gallery" class="section-pad">
+<section id="gallery" class="section">
   <div class="container">
-    <div class="section-head">
-      <p class="section-tag">Atelier Life</p>
-      <h2 class="section-title">Training <span>Gallery</span></h2>
-      <p class="section-sub">A creative environment for learning, designing and building fashion confidence.</p>
+    <div class="center">
+      <p class="tag">Atelier Life</p>
+      <h2 class="title">Training <span>Gallery</span></h2>
+      <p class="sub">A professional creative environment for learning, designing and building fashion confidence.</p>
     </div>
-    <div class="gallery-grid">
-      <div class="gallery-img large g1"></div>
-      <div class="gallery-img g2"></div>
-      <div class="gallery-img g3"></div>
-      <div class="gallery-img g4"></div>
-      <div class="gallery-img g5"></div>
+    <div class="gallery">
+      <div class="gal big g1"></div><div class="gal g2"></div><div class="gal g3"></div><div class="gal g4"></div><div class="gal g5"></div>
     </div>
   </div>
 </section>
 
-<section id="apply" class="section-pad application-section">
+<section id="apply" class="section applySec">
   <div class="container">
-    <div class="section-head">
-      <p class="section-tag">Admissions Open</p>
-      <h2 class="section-title">Sewing Programme <span>Application</span></h2>
-      <p class="section-sub">Complete the form below to begin your journey into professional sewing, fashion design and garment construction.</p>
+    <div class="center">
+      <p class="tag">Admissions Open</p>
+      <h2 class="title">Sewing Programme <span>Application</span></h2>
+      <p class="sub">Complete the application form below. Our admissions team will contact you on WhatsApp after review.</p>
     </div>
 
-    <div class="steps-wrap">
-      <div class="steps">
-        <div class="step-wrapper"><div class="step active" id="step-dot-1" onclick="goStep(1)"><div class="step-dot">1</div></div><div class="step-label">Personal</div></div>
-        <div class="step-line" id="line-1"></div>
-        <div class="step-wrapper"><div class="step" id="step-dot-2" onclick="goStep(2)"><div class="step-dot">2</div></div><div class="step-label">Background</div></div>
-        <div class="step-line" id="line-2"></div>
-        <div class="step-wrapper"><div class="step" id="step-dot-3" onclick="goStep(3)"><div class="step-dot">3</div></div><div class="step-label">Programme</div></div>
-        <div class="step-line" id="line-3"></div>
-        <div class="step-wrapper"><div class="step" id="step-dot-4" onclick="goStep(4)"><div class="step-dot">4</div></div><div class="step-label">Review</div></div>
+    <div class="steps">
+      <div class="stepWrap"><div class="step active" id="s1">1</div><div class="stepLabel">Personal</div></div><div class="line" id="l1"></div>
+      <div class="stepWrap"><div class="step" id="s2">2</div><div class="stepLabel">Background</div></div><div class="line" id="l2"></div>
+      <div class="stepWrap"><div class="step" id="s3">3</div><div class="stepLabel">Programme</div></div><div class="line" id="l3"></div>
+      <div class="stepWrap"><div class="step" id="s4">4</div><div class="stepLabel">Review</div></div>
+    </div>
+
+    <div class="formCard">
+      <div class="panel active" id="p1">
+        <h3>Personal <span>Information</span></h3><p class="panelSub">Tell us about yourself so we can process your application.</p>
+        <div class="formGrid">
+          <div class="group"><label>First Name *</label><input id="fname" placeholder="Akosua"></div><div class="group"><label>Last Name *</label><input id="lname" placeholder="Mensah"></div>
+          <div class="group"><label>Email *</label><input id="email" type="email" placeholder="name@email.com"></div><div class="group"><label>Phone / WhatsApp *</label><input id="phone" placeholder="+233 24 000 0000"></div>
+          <div class="group"><label>Date of Birth *</label><input id="dob" type="date"></div><div class="group"><label>Gender</label><select id="gender"><option value="">Select…</option><option>Female</option><option>Male</option><option>Prefer not to say</option></select></div>
+          <div class="group full"><label>Home Address *</label><input id="address" placeholder="Street, City, Region, Ghana"></div>
+          <div class="group"><label>Nationality</label><input id="nationality" placeholder="Ghanaian"></div><div class="group"><label>Parent / Guardian Contact</label><input id="guardian" placeholder="Name and phone number"></div>
+          <div class="group full"><label>Emergency Contact</label><input id="emergency" placeholder="Name and phone number"></div>
+        </div>
+        <div class="btnrow"><span></span><button class="next" onclick="nextStep(1)">Continue →</button></div>
       </div>
-    </div>
 
-    <div class="form-outer">
-      <div class="form-card">
+      <div class="panel" id="p2">
+        <h3>Your <span>Background</span></h3><p class="panelSub">Help us place you in the right training class.</p>
+        <div class="formGrid"><div class="group"><label>Highest Education Level</label><select id="education"><option value="">Select…</option><option>Primary School</option><option>Junior High School</option><option>Senior High School</option><option>Vocational / Technical</option><option>Tertiary / University</option><option>Postgraduate</option></select></div><div class="group"><label>Current Occupation</label><input id="occupation" placeholder="Student, worker, trader…"></div></div>
+        <div class="divide"></div>
+        <div class="group full"><label>Sewing Experience Level *</label><div class="choiceGrid"><div class="choice"><input type="radio" name="experience" id="e1" value="Complete Beginner" checked><label for="e1">✂️ Complete Beginner<small>I have never sewn before.</small></label></div><div class="choice"><input type="radio" name="experience" id="e2" value="Basic Skills"><label for="e2">🪡 Basic Skills<small>I can do simple stitching.</small></label></div><div class="choice"><input type="radio" name="experience" id="e3" value="Intermediate"><label for="e3">📐 Intermediate<small>I have made simple garments.</small></label></div><div class="choice"><input type="radio" name="experience" id="e4" value="Advanced"><label for="e4">👑 Advanced<small>I sew regularly.</small></label></div></div></div>
+        <div class="divide"></div>
+        <div class="group full"><label>Why do you want to learn at Mirisek Couture? *</label><textarea id="motivation" placeholder="Tell us what you hope to learn and create…"></textarea></div>
+        <div class="divide"></div>
+        <div class="group full"><label>Have you taken any sewing course before?</label><div class="choiceGrid"><div class="choice"><input type="radio" name="prev" id="py" value="Yes"><label for="py">Yes</label></div><div class="choice"><input type="radio" name="prev" id="pn" value="No" checked><label for="pn">No</label></div></div></div>
+        <div class="group full" id="prevBox" style="display:none;margin-top:16px"><label>Previous Training Details</label><textarea id="prevDetail" placeholder="Where, when and what did you study?"></textarea></div>
+        <div class="btnrow"><button class="back" onclick="prevStep(2)">← Back</button><button class="next" onclick="nextStep(2)">Continue →</button></div>
+      </div>
 
-        <div class="form-panel active" id="panel-1">
-          <h2 class="panel-title">Personal <span>Information</span></h2>
-          <p class="panel-sub">Tell us about yourself so we can process your application.</p>
-          <div class="form-grid">
-            <div class="form-group"><label for="fname">First Name *</label><input type="text" id="fname" placeholder="Akosua" required /></div>
-            <div class="form-group"><label for="lname">Last Name *</label><input type="text" id="lname" placeholder="Mensah" required /></div>
-            <div class="form-group"><label for="email">Email Address *</label><input type="email" id="email" placeholder="name@email.com" required /></div>
-            <div class="form-group"><label for="phone">Phone / WhatsApp *</label><input type="tel" id="phone" placeholder="+233 24 000 0000" required /></div>
-            <div class="form-group"><label for="dob">Date of Birth *</label><input type="date" id="dob" required /></div>
-            <div class="form-group"><label for="gender">Gender</label><select id="gender"><option value="">Select…</option><option>Female</option><option>Male</option><option>Prefer not to say</option></select></div>
-            <div class="form-group full"><label for="address">Home Address *</label><input type="text" id="address" placeholder="Street, City, Region, Ghana" required /></div>
-            <div class="form-group"><label for="nationality">Nationality</label><input type="text" id="nationality" placeholder="Ghanaian" /></div>
-            <div class="form-group"><label for="guardian">Parent / Guardian Contact</label><input type="text" id="guardian" placeholder="Name & phone number" /></div>
-            <div class="form-group full"><label for="emergency">Emergency Contact</label><input type="text" id="emergency" placeholder="Name & phone number" /></div>
-          </div>
-          <div class="btn-row"><span></span><button class="btn-next" onclick="nextStep(1)">Continue →</button></div>
+      <div class="panel" id="p3">
+        <h3>Choose Your <span>Programme</span></h3><p class="panelSub">Select the course that best fits your goals and availability.</p>
+        <div class="programChoice">
+          <label class="pchoice"><input type="radio" name="programme" value="Foundation Sewing Course — 4 Weeks" checked><div class="pbody"><p class="ptag">Beginner</p><p class="pname">Foundation Sewing</p><p class="pdesc">Machine basics, cutting and garment finishing.</p><p class="pprice">GHS 1,200</p></div></label>
+          <label class="pchoice"><input type="radio" name="programme" value="Kente & Ankara Couture — 8 Weeks"><div class="pbody"><p class="ptag">Intermediate</p><p class="pname">Kente & Ankara Couture</p><p class="pdesc">Structured African garments and couture finishing.</p><p class="pprice">GHS 2,400</p></div></label>
+          <label class="pchoice"><input type="radio" name="programme" value="Luxury Bridal & Eveningwear — 12 Weeks"><div class="pbody"><p class="ptag">Advanced</p><p class="pname">Luxury Bridal</p><p class="pdesc">Draping, boning, embellishment and fittings.</p><p class="pprice">GHS 4,800</p></div></label>
+          <label class="pchoice"><input type="radio" name="programme" value="Private 1-on-1 Mentorship"><div class="pbody"><p class="ptag">Bespoke</p><p class="pname">Private Mentorship</p><p class="pdesc">Custom training with a lead designer.</p><p class="pprice">From GHS 6,000</p></div></label>
         </div>
+        <div class="divide"></div>
+        <div class="formGrid"><div class="group"><label>Preferred Start Date *</label><input id="start" type="date"></div><div class="group"><label>Preferred Schedule *</label><select id="schedule"><option value="">Select…</option><option>Weekday mornings</option><option>Weekday afternoons</option><option>Weekend Saturdays</option><option>Flexible / Hybrid</option></select></div><div class="group full"><label>What do you hope to create after this programme?</label><textarea id="goals" placeholder="I want to start a fashion business, sew for myself, design bridal outfits…"></textarea></div><div class="group full"><label>How did you hear about us?</label><div class="choiceGrid"><div class="choice"><input type="radio" name="source" id="so1" value="Instagram"><label for="so1">Instagram</label></div><div class="choice"><input type="radio" name="source" id="so2" value="Friend / Family"><label for="so2">Friend / Family</label></div><div class="choice"><input type="radio" name="source" id="so3" value="Website"><label for="so3">Website</label></div><div class="choice"><input type="radio" name="source" id="so4" value="Other"><label for="so4">Other</label></div></div></div><div class="group full"><label>Upload Portfolio / Sketches Optional</label><div class="upload" onclick="document.getElementById('files').click()">📎 Click to browse JPG, PNG or PDF<input id="files" type="file" multiple accept=".jpg,.jpeg,.png,.pdf"></div><p id="fileNames" style="font-size:12px;color:var(--gold);margin-top:8px"></p></div></div>
+        <div class="btnrow"><button class="back" onclick="prevStep(3)">← Back</button><button class="next" onclick="nextStep(3)">Review Application →</button></div>
+      </div>
 
-        <div class="form-panel" id="panel-2">
-          <h2 class="panel-title">Your <span>Background</span></h2>
-          <p class="panel-sub">Help us place you in the most suitable class.</p>
-          <div class="form-grid">
-            <div class="form-group"><label for="education">Highest Education Level</label><select id="education"><option value="">Select…</option><option>Primary School</option><option>Junior High School</option><option>Senior High School</option><option>Vocational / Technical</option><option>Tertiary / University</option><option>Postgraduate</option></select></div>
-            <div class="form-group"><label for="occupation">Current Occupation</label><input type="text" id="occupation" placeholder="Student, trader, worker…" /></div>
-          </div>
-          <div class="form-divider"></div>
-          <div class="form-group full" style="margin-bottom:24px;">
-            <label style="margin-bottom:16px;display:block;">Sewing Experience Level *</label>
-            <div class="choice-grid">
-              <div class="choice-card"><input type="radio" name="experience" id="exp-none" value="Complete Beginner" checked /><label class="choice-label" for="exp-none"><span class="choice-title">✂️ Complete Beginner</span><span class="choice-sub">I have never sewn before.</span></label></div>
-              <div class="choice-card"><input type="radio" name="experience" id="exp-basic" value="Basic Skills" /><label class="choice-label" for="exp-basic"><span class="choice-title">🪡 Basic Skills</span><span class="choice-sub">I can do simple stitching.</span></label></div>
-              <div class="choice-card"><input type="radio" name="experience" id="exp-inter" value="Intermediate" /><label class="choice-label" for="exp-inter"><span class="choice-title">📐 Intermediate</span><span class="choice-sub">I have made simple garments.</span></label></div>
-              <div class="choice-card"><input type="radio" name="experience" id="exp-adv" value="Advanced" /><label class="choice-label" for="exp-adv"><span class="choice-title">👑 Advanced</span><span class="choice-sub">I sew regularly.</span></label></div>
-            </div>
-          </div>
-          <div class="form-group full" style="margin-bottom:24px;"><label for="motivation">Why do you want to learn at Mirisek Couture? *</label><textarea id="motivation" placeholder="Tell us what you hope to learn…" required></textarea></div>
-          <div class="form-group full">
-            <label>Have you taken any sewing course before?</label>
-            <div class="choice-grid">
-              <div class="choice-card"><input type="radio" name="prev-course" id="pc-yes" value="Yes" /><label class="choice-label" for="pc-yes"><span class="choice-title">Yes</span></label></div>
-              <div class="choice-card"><input type="radio" name="prev-course" id="pc-no" value="No" checked /><label class="choice-label" for="pc-no"><span class="choice-title">No</span></label></div>
-            </div>
-          </div>
-          <div id="prev-course-detail" style="display:none;margin-top:16px;"><div class="form-group full"><label for="prev-detail">Previous Training Details</label><textarea id="prev-detail" placeholder="Where, when, and what did you study?" style="min-height:80px;"></textarea></div></div>
-          <div class="btn-row"><button class="btn-back" onclick="prevStep(2)">← Back</button><button class="btn-next" onclick="nextStep(2)">Continue →</button></div>
-        </div>
+      <div class="panel" id="p4">
+        <h3>Review Your <span>Application</span></h3><p class="panelSub">Confirm your details before submission.</p>
+        <div class="review"><h4>Personal Information</h4><div id="reviewPersonal"></div><h4>Background & Experience</h4><div id="reviewBack"></div><h4>Programme Selection</h4><div id="reviewProg"></div></div>
+        <div style="margin-top:25px;border:1px solid var(--line);border-radius:16px;background:rgba(200,151,58,.07);padding:18px"><label style="display:flex;gap:12px;align-items:flex-start;letter-spacing:0;text-transform:none;color:var(--cream);font-size:14px;line-height:1.7"><input id="consent" type="checkbox" style="width:auto;margin-top:4px;accent-color:var(--gold)">I certify that the information provided is true and accurate to the best of my knowledge. I will at all times abide by the rules of engagement as stipulated in the Mirisek Couture Code of Conduct Manual.</label></div>
+        <div class="btnrow"><button class="back" onclick="prevStep(4)">← Back</button><button class="next" onclick="submitApp()">Submit Application ✦</button></div>
+      </div>
 
-        <div class="form-panel" id="panel-3">
-          <h2 class="panel-title">Choose Your <span>Programme</span></h2>
-          <p class="panel-sub">Select the course that best fits your goals.</p>
-          <div class="prog-grid" style="margin-bottom:32px;">
-            <label class="prog-card"><input type="radio" name="programme" value="Foundation Sewing Course — 4 Weeks" checked /><div class="prog-body"><span class="prog-tag">Beginner</span><p class="prog-name">Foundation Sewing</p><p class="prog-desc">Machine basics, stitching, cutting and finishing.</p><div class="prog-meta"><span class="prog-meta-item">⏱ <strong>4 Weeks</strong></span><span class="prog-meta-item">👥 <strong>Max 8</strong></span></div><p class="prog-price">GHS 1,200</p></div></label>
-            <label class="prog-card"><input type="radio" name="programme" value="Kente & Ankara Couture — 8 Weeks" /><div class="prog-body"><span class="prog-tag">Intermediate</span><p class="prog-name">Kente & Ankara Couture</p><p class="prog-desc">African garment construction and structured pieces.</p><div class="prog-meta"><span class="prog-meta-item">⏱ <strong>8 Weeks</strong></span><span class="prog-meta-item">👥 <strong>Max 6</strong></span></div><p class="prog-price">GHS 2,400</p></div></label>
-            <label class="prog-card"><input type="radio" name="programme" value="Luxury Bridal & Eveningwear — 12 Weeks" /><div class="prog-body"><span class="prog-tag">Advanced</span><p class="prog-name">Luxury Bridal</p><p class="prog-desc">Draping, boning, embellishment and fittings.</p><div class="prog-meta"><span class="prog-meta-item">⏱ <strong>12 Weeks</strong></span><span class="prog-meta-item">👥 <strong>Max 4</strong></span></div><p class="prog-price">GHS 4,800</p></div></label>
-            <label class="prog-card"><input type="radio" name="programme" value="Private 1-on-1 Mentorship" /><div class="prog-body"><span class="prog-tag">Bespoke</span><p class="prog-name">Private Mentorship</p><p class="prog-desc">Personalised training with the lead designer.</p><div class="prog-meta"><span class="prog-meta-item">⏱ <strong>Custom</strong></span><span class="prog-meta-item">👥 <strong>1 Student</strong></span></div><p class="prog-price">From GHS 6,000</p></div></label>
-          </div>
-          <div class="form-grid">
-            <div class="form-group"><label for="start-date">Preferred Start Date *</label><input type="date" id="start-date" required /></div>
-            <div class="form-group"><label for="schedule">Preferred Schedule *</label><select id="schedule" required><option value="">Select…</option><option>Weekday mornings</option><option>Weekday afternoons</option><option>Weekend Saturdays</option><option>Flexible / Hybrid</option></select></div>
-            <div class="form-group full"><label for="goals">What do you hope to create after this programme?</label><textarea id="goals" placeholder="I want to start a fashion business, sew for myself, design bridal outfits…"></textarea></div>
-            <div class="form-group full"><label>How did you hear about us?</label><div class="choice-grid"><div class="choice-card"><input type="radio" name="source" id="src-ig" value="Instagram" /><label class="choice-label" for="src-ig"><span class="choice-title">Instagram</span></label></div><div class="choice-card"><input type="radio" name="source" id="src-ref" value="Friend / Family" /><label class="choice-label" for="src-ref"><span class="choice-title">Friend / Family</span></label></div><div class="choice-card"><input type="radio" name="source" id="src-web" value="Website" /><label class="choice-label" for="src-web"><span class="choice-title">Website</span></label></div><div class="choice-card"><input type="radio" name="source" id="src-other" value="Other" /><label class="choice-label" for="src-other"><span class="choice-title">Other</span></label></div></div></div>
-            <div class="form-group full"><label>Upload Portfolio / Sketches Optional</label><div class="upload-zone" onclick="document.getElementById('portfolio-upload').click()"><p>📎 Drag & drop files or <span style="color:var(--gold);">click to browse</span></p><p style="font-size:11px;margin-top:6px;color:var(--muted);">JPG, PNG, PDF — max 5MB each</p><input type="file" id="portfolio-upload" multiple accept=".jpg,.jpeg,.png,.pdf" /></div><p id="file-names" style="font-size:12px;color:var(--gold);margin-top:8px;"></p></div>
-          </div>
-          <div class="btn-row"><button class="btn-back" onclick="prevStep(3)">← Back</button><button class="btn-next" onclick="nextStep(3)">Review Application →</button></div>
-        </div>
-
-        <div class="form-panel" id="panel-4">
-          <h2 class="panel-title">Review Your <span>Application</span></h2>
-          <p class="panel-sub">Confirm your details before submission.</p>
-          <div class="review-section"><h4>Personal Information</h4><div id="review-personal"></div></div>
-          <div class="review-section"><h4>Background & Experience</h4><div id="review-background"></div></div>
-          <div class="review-section"><h4>Programme Selection</h4><div id="review-programme"></div></div>
-          <div style="background:rgba(200,151,58,.06);border:.5px solid var(--border);border-radius:14px;padding:20px;margin-top:24px;">
-            <label style="display:flex;gap:12px;align-items:flex-start;line-height:1.7;text-transform:none;letter-spacing:0;font-size:13px;color:var(--off-white);">
-              <input type="checkbox" id="consent" style="width:auto;margin-top:3px;accent-color:var(--gold);" />
-              I certify that the information provided is true and accurate to the best of my knowledge. I will at all times abide by the rules of engagement as stipulated in the Mirisek Couture Code of Conduct Manual.
-            </label>
-          </div>
-          <div class="btn-row"><button class="btn-back" onclick="prevStep(4)">← Back</button><button class="btn-next" onclick="submitApp()">Submit Application ✦</button></div>
-        </div>
-
-        <div class="form-panel" id="panel-success">
-          <div class="success-wrap">
-            <div class="success-icon">✦</div>
-            <h2 class="success-title">Application <span style="color:var(--gold-light);">Received</span></h2>
-            <p class="success-sub">Thank you for applying to Mirisek Couture Academy. Our admissions team will review your application and contact you through WhatsApp.</p>
-            <div class="success-ref">Your reference number<br><strong id="ref-number">MC-2026-XXXX</strong></div><br>
-            <a class="whatsapp-btn" href="https://wa.me/233245358992" target="_blank" rel="noopener">Continue on WhatsApp</a>
-          </div>
-        </div>
-
+      <div class="panel" id="success">
+        <div class="success"><div class="successIcon">✦</div><h3>Application <span style="color:var(--gold2)">Received</span></h3><p class="panelSub" style="max-width:520px;margin:10px auto 0">Thank you for applying to Mirisek Couture Academy. Our admissions team will review your application and contact you through WhatsApp.</p><div class="ref">Your reference number<br><strong id="ref">MC-2026-XXXX</strong></div><br><a class="wa" href="https://wa.me/233245358992" target="_blank" rel="noopener">Continue on WhatsApp</a></div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="contact" class="section-pad">
-  <div class="container contact-grid">
-    <div class="contact-card">
-      <p class="section-tag">Visit Our Atelier</p>
-      <h3>Book a consultation or apply for training.</h3>
-      <p>Mirisek Couture welcomes fashion lovers, brides, students and aspiring designers.</p>
-      <a href="https://wa.me/233245358992" target="_blank" rel="noopener" class="btn-primary">Chat on WhatsApp</a>
-    </div>
-    <div class="contact-card">
-      <h3>Contact</h3>
-      <p><strong>Location:</strong><br>Oyarifa School Junction, Behind Shell Filling Station, Accra, Ghana</p>
-      <p><strong>Phone:</strong><br>+233 0245 358 992</p>
-      <p><strong>Instagram:</strong><br>@mirisek_couture</p>
-    </div>
+<section id="contact" class="section">
+  <div class="container contact">
+    <div class="glass"><p class="tag">Visit Our Atelier</p><h3>Book a consultation or apply for training.</h3><p>We welcome brides, fashion lovers, aspiring designers and students who want to learn sewing professionally.</p><a class="btn" href="https://wa.me/233245358992" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+    <div class="glass"><h3>Contact</h3><p><strong>Location:</strong><br>Oyarifa School Junction, Behind Shell Filling Station, Accra, Ghana</p><p><strong>Phone:</strong><br>+233 0245 358 992</p><p><strong>Instagram:</strong><br>@mirisek_couture</p></div>
   </div>
 </section>
 
-<footer class="footer">
-  <strong>Mirisek Couture</strong><br>
-  African Luxury Fashion House & Sewing Academy<br>
-  Oyarifa School Junction, Behind Shell Filling Station, Accra, Ghana · +233 0245 358 992
-</footer>
+<footer class="footer"><strong>Mirisek Couture</strong><br>African Luxury Fashion House & Sewing Academy<br>Oyarifa School Junction, Behind Shell Filling Station, Accra, Ghana · +233 0245 358 992</footer>
 
 <script>
 let current=1;
-
-function goStep(n){
-  if(n<current){current=n;updateUI();}
-}
-function nextStep(from){
-  if(!validate(from))return;
-  if(from===3)buildReview();
-  current=from+1;
-  updateUI();
-}
-function prevStep(from){
-  current=from-1;
-  updateUI();
-}
-function updateUI(){
-  document.querySelectorAll('.form-panel').forEach(p=>p.classList.remove('active'));
-  const id=current<=4?'panel-'+current:'panel-success';
-  document.getElementById(id).classList.add('active');
-  for(let i=1;i<=4;i++){
-    const dot=document.getElementById('step-dot-'+i);
-    const line=document.getElementById('line-'+i);
-    if(!dot)continue;
-    dot.classList.remove('active','done');
-    if(i<current)dot.classList.add('done');
-    if(i===current)dot.classList.add('active');
-    if(line){line.classList.remove('done');if(i<current)line.classList.add('done');}
-  }
-  document.getElementById('apply').scrollIntoView({behavior:'smooth',block:'start'});
-}
-function validate(step){
-  let ok=true;
-  const required={1:['fname','lname','email','phone','dob','address'],2:['motivation'],3:['start-date','schedule']};
-  if(required[step]){
-    required[step].forEach(id=>{
-      const el=document.getElementById(id);
-      if(!el || !el.value.trim()){el.classList.add('invalid');ok=false;}
-      else el.classList.remove('invalid');
-    });
-  }
-  return ok;
-}
-document.querySelectorAll('input,select,textarea').forEach(el=>{
-  el.addEventListener('input',()=>el.classList.remove('invalid'));
-});
-document.querySelectorAll('input[name="prev-course"]').forEach(r=>{
-  r.addEventListener('change',function(){
-    document.getElementById('prev-course-detail').style.display=this.value==='Yes'?'block':'none';
-  });
-});
-document.getElementById('portfolio-upload').addEventListener('change',function(){
-  const names=Array.from(this.files).map(f=>f.name).join(', ');
-  document.getElementById('file-names').textContent=names?'📎 '+names:'';
-});
-function val(id){const e=document.getElementById(id);return e?e.value:'';}
-function radioVal(name){const r=document.querySelector('input[name="'+name+'"]:checked');return r?r.value:'';}
-function buildReview(){
-  const sections=[
-    {id:'review-personal',data:[
-      ['Full Name',val('fname')+' '+val('lname')],['Email',val('email')],['Phone',val('phone')],['Date of Birth',val('dob')],['Address',val('address')],['Guardian',val('guardian')||'—']
-    ]},
-    {id:'review-background',data:[
-      ['Education',val('education')||'—'],['Occupation',val('occupation')||'—'],['Experience Level',radioVal('experience')],['Motivation',val('motivation').substring(0,90)+(val('motivation').length>90?'…':'')]
-    ]},
-    {id:'review-programme',data:[
-      ['Programme',radioVal('programme')],['Preferred Start',val('start-date')],['Schedule',val('schedule')],['Heard From',radioVal('source')||'—'],['Goals',val('goals')||'—']
-    ]}
-  ];
-  sections.forEach(section=>{
-    document.getElementById(section.id).innerHTML=section.data.map(([k,v])=>`<div class="review-row"><span class="review-key">${k}</span><span class="review-val">${v||'—'}</span></div>`).join('');
-  });
-}
-function submitApp(){
-  const consent=document.getElementById('consent');
-  if(!consent.checked){
-    consent.style.outline='2px solid var(--danger)';
-    setTimeout(()=>consent.style.outline='none',1800);
-    return;
-  }
-  const yr=new Date().getFullYear();
-  const ref='MC-'+yr+'-'+Math.floor(1000+Math.random()*9000);
-  document.getElementById('ref-number').textContent=ref;
-  current=5;
-  updateUI();
-}
+function toggleMenu(){document.getElementById('navLinks').classList.toggle('show')}
+document.querySelectorAll('.links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('show')));
+function showPanel(){document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));document.getElementById(current===5?'success':'p'+current).classList.add('active');for(let i=1;i<=4;i++){let s=document.getElementById('s'+i),l=document.getElementById('l'+i);s.classList.remove('active','done');if(i<current)s.classList.add('done');if(i===current)s.classList.add('active');if(l){l.classList.remove('done');if(i<current)l.classList.add('done')}}document.getElementById('apply').scrollIntoView({behavior:'smooth',block:'start'})}
+function validate(step){let ids={1:['fname','lname','email','phone','dob','address'],2:['motivation'],3:['start','schedule']}[step]||[];let ok=true;ids.forEach(id=>{let e=document.getElementById(id);if(!e.value.trim()){e.classList.add('invalid');ok=false}else e.classList.remove('invalid')});return ok}
+function nextStep(n){if(!validate(n))return;if(n===3)buildReview();current=n+1;showPanel()}function prevStep(n){current=n-1;showPanel()}
+document.querySelectorAll('input,select,textarea').forEach(e=>e.addEventListener('input',()=>e.classList.remove('invalid')));
+document.querySelectorAll('input[name="prev"]').forEach(r=>r.addEventListener('change',()=>{document.getElementById('prevBox').style.display=document.querySelector('input[name="prev"]:checked').value==='Yes'?'block':'none'}));
+document.getElementById('files').addEventListener('change',function(){document.getElementById('fileNames').textContent=Array.from(this.files).map(f=>f.name).join(', ')});
+function val(id){return document.getElementById(id)?.value||''}function radio(name){return document.querySelector('input[name="'+name+'"]:checked')?.value||''}
+function rows(data){return data.map(([k,v])=>'<div class="row"><span class="key">'+k+'</span><span class="val">'+(v||'—')+'</span></div>').join('')}
+function buildReview(){document.getElementById('reviewPersonal').innerHTML=rows([['Full Name',val('fname')+' '+val('lname')],['Email',val('email')],['Phone',val('phone')],['Date of Birth',val('dob')],['Address',val('address')],['Guardian',val('guardian')]]);document.getElementById('reviewBack').innerHTML=rows([['Education',val('education')],['Occupation',val('occupation')],['Experience',radio('experience')],['Previous Course',radio('prev')],['Motivation',val('motivation').slice(0,90)+(val('motivation').length>90?'…':'')]]);document.getElementById('reviewProg').innerHTML=rows([['Programme',radio('programme')],['Preferred Start',val('start')],['Schedule',val('schedule')],['Heard From',radio('source')],['Goals',val('goals')]])}
+function submitApp(){let c=document.getElementById('consent');if(!c.checked){c.style.outline='2px solid var(--red)';setTimeout(()=>c.style.outline='none',1800);return}document.getElementById('ref').textContent='MC-'+new Date().getFullYear()+'-'+Math.floor(1000+Math.random()*9000);current=5;showPanel()}
 </script>
 </body>
 </html>
